@@ -2,6 +2,8 @@
 
 A Bayesian model that ranks every Formula 1 driver from 1950 to 2026 by how well he drove relative to his car and his teammates, not by what he won.
 
+**The full write-up is in [F1-driver-ranking-report.pdf](F1-driver-ranking-report.pdf).**
+
 ## Headline results
 
 **Peak, best three straight seasons, all-time from 1950.** Drivers in the same tier can't be reliably separated.
