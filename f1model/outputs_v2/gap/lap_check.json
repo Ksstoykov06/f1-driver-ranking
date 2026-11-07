@@ -1,0 +1,1 @@
+{"car_q":{"n":91,"spearman":0.949,"within_season":0.928},"car_r":{"n":91,"spearman":0.925,"within_season":0.913},"teammates_q":{"n":94,"pearson":0.791,"spearman":0.78,"same_sign":0.766},"teammates_r":{"n":93,"pearson":0.817,"spearman":0.785,"same_sign":0.796},"seasons":{"n":183,"base_vs_lap":0.895,"b18_vs_lap":0.929,"base_vs_b18":0.953}}

@@ -1,0 +1,1 @@
+{'pipeline': 'B', 'max_rhat': 1.1787527799606323, 'worst': 'dev_r', 'min_ess': 3.939601975415898, 'min_ess_param': 'car_r'}

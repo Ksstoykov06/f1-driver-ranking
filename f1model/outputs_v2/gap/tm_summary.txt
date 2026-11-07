@@ -1,0 +1,32 @@
+                                   run             driver         role  peak_b  peak_t  d_peak  rank_b  rank_t  car_b  car_t  crank_b  crank_t  peak_unc  others_mean_move
+             ayrton-senna__alain-prost       ayrton-senna removed-from    4.61    4.52   -0.10       4       2  36.81  38.06        5        5      2.47              0.11
+             ayrton-senna__alain-prost        alain-prost     teammate    6.89    7.66    0.78      18      28  25.19  17.34        8       11      4.29              0.11
+          ayrton-senna__gerhard-berger       ayrton-senna removed-from    4.61    4.72    0.11       4       4  36.81  36.33        5        5      2.47              0.11
+          ayrton-senna__gerhard-berger     gerhard-berger     teammate    9.36    9.75    0.39      58      77   0.45  -1.61       73      100      3.69              0.11
+         fernando-alonso__felipe-massa    fernando-alonso removed-from    6.18    6.34    0.17      10      13  48.81  45.33        2        2      3.78              0.12
+         fernando-alonso__felipe-massa       felipe-massa     teammate    9.67    8.75   -0.92      71      48  -0.02   3.93       78       46      3.95              0.12
+         fernando-alonso__lance-stroll    fernando-alonso removed-from    6.18    5.97   -0.21      10       9  48.81  48.64        2        2      3.78              0.11
+         fernando-alonso__lance-stroll       lance-stroll     teammate   11.95   12.04    0.08     137     140 -18.37 -10.56      214      204      3.80              0.11
+           graham-hill__richie-ginther        graham-hill removed-from    5.43    4.95   -0.48       6       6  15.51  16.75       13       13      2.90              0.11
+           graham-hill__richie-ginther     richie-ginther     teammate    9.33     NaN     NaN      57      -1   1.99  -0.18       58       78      4.67              0.11
+       jackie-stewart__francois-cevert     jackie-stewart removed-from    5.01    5.05    0.04       5       5  22.82  22.50        9        9      3.38              0.12
+       jackie-stewart__francois-cevert    francois-cevert     teammate    9.85     NaN     NaN      80      -1   0.67    NaN       69       -1      4.21              0.12
+              jim-clark__trevor-taylor          jim-clark removed-from    4.57    4.73    0.16       3       4  14.88  14.14       16       17      2.90              0.10
+              jim-clark__trevor-taylor      trevor-taylor     teammate   12.95     NaN     NaN     162      -1  -2.79  -0.56      126       83      4.89              0.10
+        juan-manuel-fangio__karl-kling juan-manuel-fangio removed-from    4.35    4.50    0.15       1       1  13.01  12.81       20       21      2.91              0.14
+        juan-manuel-fangio__karl-kling         karl-kling     teammate     NaN     NaN     NaN      -1      -1  -0.64    NaN       -1       -1       NaN              0.14
+          lewis-hamilton__nico-rosberg     lewis-hamilton removed-from    6.59    5.95   -0.64      14       9  41.78  47.04        4        3      3.54              0.10
+          lewis-hamilton__nico-rosberg       nico-rosberg     teammate    7.21   10.06    2.86      20      85  14.20   0.06       17       76      4.40              0.10
+       lewis-hamilton__valtteri-bottas     lewis-hamilton removed-from    6.59    6.47   -0.11      14      15  41.78  41.50        4        4      3.54              0.10
+       lewis-hamilton__valtteri-bottas    valtteri-bottas     teammate    9.42    8.71   -0.71      61      48 -12.69  -9.19      209      198      4.46              0.10
+          max-verstappen__sergio-perez     max-verstappen removed-from    5.51    5.64    0.13       7       7  45.88  44.43        3        3      3.19              0.11
+          max-verstappen__sergio-perez       sergio-perez     teammate   10.78   10.76   -0.02     109     107 -16.64  -7.80      213      192      4.51              0.11
+michael-schumacher__rubens-barrichello michael-schumacher removed-from    4.45    4.65    0.21       2       4  55.42  53.08        1        1      2.22              0.11
+michael-schumacher__rubens-barrichello rubens-barrichello     teammate    8.69    8.33   -0.36      47      41  12.48   8.01       21       36      4.23              0.11
+       nigel-mansell__riccardo-patrese      nigel-mansell removed-from    6.42    5.60   -0.83      13       9  21.82  23.99       10        8      3.74              0.11
+       nigel-mansell__riccardo-patrese   riccardo-patrese     teammate    9.71    9.47   -0.25      74      64  -4.46  -2.31      161      118      4.44              0.11
+            niki-lauda__clay-regazzoni         niki-lauda removed-from    5.57    5.60    0.03       8       8  27.83  26.04        6        7      3.42              0.11
+            niki-lauda__clay-regazzoni     clay-regazzoni     teammate    9.80    9.69   -0.11      78      71  -0.76   0.21       84       77      4.49              0.11
+         sebastian-vettel__mark-webber   sebastian-vettel removed-from    7.07    7.18    0.11      19      21  16.72  16.18       11       13      4.12              0.11
+         sebastian-vettel__mark-webber        mark-webber     teammate    8.92    9.33    0.41      51      59  -1.06   4.31       89       46      4.74              0.11
+ordinary noise (C50 vs base) per-driver peak move, mean 0.108

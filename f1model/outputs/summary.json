@@ -1,0 +1,27 @@
+{
+ "B": {
+  "pipeline": "B",
+  "max_rhat": 1.0055164098739624,
+  "worst": "car_q",
+  "min_ess": 467.3953216430497,
+  "min_ess_param": "log_dev_tau"
+ },
+ "A": {
+  "pipeline": "A",
+  "max_rhat": 1.0091499090194702,
+  "worst": "age2",
+  "min_ess": 269.9870167826447,
+  "min_ess_param": "car_r_sd"
+ },
+ "agreement": {
+  "score": 0.9032258064516129,
+  "skill_q": 0.85,
+  "skill_r": 0.7556451612903226,
+  "adapt_sigma": 0.47096774193548385,
+  "peak": 0.9192307692307692,
+  "career": 0.8439516129032258,
+  "wet_q": 0.603225806451613,
+  "wet_r": 0.38266129032258067
+ },
+ "top10_overlap": 8
+}

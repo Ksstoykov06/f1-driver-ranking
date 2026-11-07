@@ -1,0 +1,117 @@
+season,gp,share_pct,confidence,evidence,source,group
+1975,austria,100,medium,"Torrential rain, declared wet, stopped lap 29; tyres not stated",https://www.motorsportmagazine.com/archive/article/september-1975/22/austrian-gp,wet
+2012,brazil,35,medium,"Inters about laps 10-18, then about 54-71 of 71",https://www.grandprix.com/races/brazilian-gp-2012-race-report-vettels-three-peat.html,changeable
+1971,canada,75,medium,"Wet from start; rain stopped about lap 48+, track dried only slightly; 64 laps",https://www.motorsportmagazine.com/archive/article/november-1971/50/the-fifth-canadian-grand-prix/,wet
+1971,netherlands,95,high,"Wet nearly whole race, wets used; 70 laps",https://www.motorsportmagazine.com/archive/article/august-1971/59/the-19th-dutch-grand-prix/,wet
+1972,monaco,100,high,Rain start to finish; 80 laps,https://www.motorsportmagazine.com/archive/article/june-1972/30/the-30th-monaco-gp/,wet
+1972,spain,6,high,Dry start; sprinkle laps 25-30; slicks only; 90 laps,https://www.motorsportmagazine.com/archive/article/june-1972/25/the-spanish-grand-prix-4/,dry
+1972,united-states,5,high,Dry start; short shower about lap 40; 59 laps,https://www.motorsportmagazine.com/archive/article/november-1972/28/united-states-grand-prix/,dry
+1973,canada,25,medium,Wet start on wets; switching to dry from lap 18-20; 81 laps,https://www.motorsportmagazine.com/archive/article/november-1973/50/canadian-grand-prix-8/,changeable
+1974,brazil,35,medium,"Dry until about lap 21, then downpour; stopped at 32",https://www.motorsportmagazine.com/archive/article/march-1974/32/brazilian-grand-prix-2/,changeable
+1974,spain,20,medium,"Wet start; rain stopped about lap 17, dry tyres from then; 84 laps",https://www.motorsportmagazine.com/archive/article/june-1974/34/the-spanish-grand-prix/,changeable
+1974,germany,0,medium,"Damp only, nobody fitted rain tyres; 14 laps",https://www.motorsportmagazine.com/archive/article/september-1974/21/german-grand-prix-18/,dry
+1975,great-britain,45,medium,Rain about laps 18-30 then again from 48 of 56; mix of slicks and wets,https://www.motorsportmagazine.com/archive/article/september-1975/45/the-british-grand-prix-chaotic/,changeable
+1975,monaco,22,medium,Wet start on wets; slicks from about lap 17 of 75,https://www.motorsportmagazine.com/archive/article/june-1975/26/33rd-monaco-grand-prix/,changeable
+1975,netherlands,12,high,Wet start; slicks from laps 7-12 of 75,https://www.motorsportmagazine.com/archive/article/august-1975/44/1975-dutch-grand-prix-report/,dry
+1976,germany,10,high,"Damp start, dry tyres after lap 1; restart dry; 14 laps",https://www.motorsportmagazine.com/archive/article/september-1976/34/german-grand-prix-15/,dry
+1976,japan,70,low,"Flooded start, rain stopped mid-race, track still drying later; tyre share not stated, my estimate",https://www.motorsportmagazine.com/special-article/the-75-greatest-grands-prix/118/11-1976-japanese-gp-james-hunt-claims-the-f1-title/,wet
+1977,austria,19,medium,"Drying before start, most on dry tyres from grid; wet about laps 1-10 of 54",https://www.motorsportmagazine.com/archive/article/september-1977/25/austrian-grand-prix-7/,dry
+1977,belgium,36,medium,"Wet start; dry tyres for all by lap 25, showers laps 31-33; 70 laps",https://www.motorsportmagazine.com/archive/article/july-1977/43/1977-belgian-grand-prix-report/,changeable
+1977,united-states,80,medium,"Rain tyres from start, drying only in closing stages; 59 laps",https://www.motorsportmagazine.com/archive/article/november-1977/51/the-united-states-grand-prix-2/,wet
+1978,austria,87,medium,"Rain from about lap 6, restart on wets for 47 laps, slicks later as dried; 54 laps",https://www.motorsportmagazine.com/archive/article/september-1978/21/austrian-grand-prix-15/,wet
+1979,south-africa,20,medium,"Wet start, dry tyres from about lap 15 of 78",https://www.motorsportmagazine.com/archive/article/april-1979/77/south-african-grand-prix-4/,changeable
+1979,united-states,45,low,"Wet tyres from start; rain stopped lap 20, nearly dry laps 29-32 of 59",https://www.motorsportmagazine.com/archive/article/november-1979/39/united-states-east-grand-prix-2/,changeable
+1980,monaco,0,high,Light rain from lap 45 but no wet tyres fitted; 76 laps,https://www.motorsportmagazine.com/archive/article/june-1980/33/monaco-grand-prix-13/,dry
+1981,brazil,90,high,"Wet start to finish, most on wets, Piquet slicks gamble; 62 laps",https://www.motorsportmagazine.com/archive/article/may-1981/64/brazilian-grand-prix-7/,wet
+1981,san-marino,85,medium,Wet Michelins for most; nearly dry about lap 15 then rain returned; 60 laps,https://www.motorsportmagazine.com/archive/article/june-1981/42/san-marino-grand-prix-5/,wet
+1981,belgium,5,high,"Shower from lap 52, no tyre changes; stopped lap 54",https://www.motorsportmagazine.com/archive/article/june-1981/46/grote-prijs-van-belgie-6/,dry
+1981,germany,0,high,Spots of rain never wet the road; 45 laps,https://www.motorsportmagazine.com/archive/article/september-1981/79/german-grand-prix-6/,dry
+1981,france,7,high,Rain laps 54-58 then red flag; restart dry; 80 laps,https://www.motorsportmagazine.com/archive/article/august-1981/40/french-grand-prix-6/,dry
+1981,canada,100,high,"Wet throughout on wets, partial drying laps 30-37; 63 laps",https://www.motorsportmagazine.com/archive/article/november-1981/72/canadian-grand-prix-12/,wet
+1982,monaco,0,medium,"Spots of rain from lap 60, track slippery; no wet tyres reported; 76 laps",https://www.motorsportmagazine.com/archive/article/july-1982/62/monaco-grand-prix-14/,dry
+1983,monaco,8,high,"Damp start, dried rapidly; most on dry tyres by about lap 5 of 76",https://www.motorsportmagazine.com/archive/article/june-1983/28/monaco-grand-prix-11/,dry
+1984,monaco,100,high,Torrential rain throughout; stopped at 31 laps,https://www.motorsportmagazine.com/archive/article/july-1984/84/reflections-in-the-monte-carlo-puddles/,wet
+1985,portugal,100,high,"Rain from start, heavier later; 67 laps",https://www.motorsportmagazine.com/archive/article/june-1985/22/portuguese-grand-prix-2/,wet
+1985,belgium,20,high,"Wets at start; slicks laps 4-9 of 43, shower about lap 17",https://www.motorsportmagazine.com/archive/article/october-1985/26/belgian-grand-prix-2/,changeable
+1988,great-britain,97,high,Wet throughout on treaded wets; 65 laps,https://www.motorsportmagazine.com/archive/article/august-1988/56/formula-one-british-grand-prix/,wet
+1988,germany,95,high,Front runners on wets start to finish; 44 laps,https://www.motorsportmagazine.com/archive/article/september-1988/10/regenmeister/,wet
+1988,japan,0,medium,"Drizzle laps 14-20 and from 32, no wet tyres reported; race on slicks as far as I recall; 51 laps",https://www.motorsportmagazine.com/archive/article/december-1988/10/the-wolf-at-the-door/,dry
+1989,canada,88,high,Wet start; brief slicks about laps 11-19 for some; 69 laps,https://www.motorsportmagazine.com/archive/article/august-1989/10/fillip-for-racing/,wet
+1989,belgium,100,high,Wet throughout on wets; 44 laps,https://www.motorsportmagazine.com/archive/article/october-1989/8/all-at-sea/,wet
+1989,australia,100,high,"Wet throughout, ran to two-hour limit; 70 laps",https://www.motorsportmagazine.com/archive/article/december-1989/17/insanity-rules/,wet
+1991,australia,100,high,"Torrential rain, stopped after 14 laps",https://www.motorsportmagazine.com/archive/article/december-1991/16/australian-grand-prix-2/,wet
+1990,canada,20,medium,"Wet start; slicks from lap 10, all switched by 17 of 70",https://www.motorsportmagazine.com/archive/article/july-1990/14/canadian-grand-prix-a-bit-confused/,changeable
+1991,brazil,0,high,"Light rain last 7 laps, no wet tyres; 71 laps",https://www.motorsportmagazine.com/archive/article/may-1991/6/formula-one-brazilian-grand-prix/,dry
+1991,san-marino,15,medium,Very wet start then dry; leaders switched about lap 10 of 61,https://www.motorsportmagazine.com/archive/article/june-1991/8/formula-one-san-marino-grand-prix/,dry
+1991,spain,15,high,Declared wet; leaders on slicks by laps 3-10 of 65,https://www.motorsportmagazine.com/archive/article/november-1991/16/spanish-grand-prix-5/,dry
+1992,spain,100,high,"All on wets from start, rain worsened; 65 laps",https://www.grandprix.com/races/spanish-gp-1992.html,wet
+1992,france,28,medium,Restart on slicks; wets from about lap 50 of 69,https://www.motorsportmagazine.com/archive/article/august-1992/8/back-in-the-groove/,changeable
+1992,belgium,68,medium,"Rain early, wets; slicks about lap 30 of 44",https://www.grandprix.com/races/belgian-gp-1992.html,wet
+1993,brazil,20,high,Wets laps 27-30 to 37-41 of 71,https://www.motorsportmagazine.com/archive/article/may-1993/10/cardinal-senna/,changeable
+1993,europe,45,low,"Wet start, slicks 17-18, back to wets 22, repeated changes; 76 laps",https://www.motorsportmagazine.com/archive/article/may-1993/18/opportunity-knocked/,changeable
+1993,san-marino,12,medium,Wet at start; slicks about lap 7 of 61 for leaders,https://www.grandprix.com/gpe/rr536.html,dry
+1993,japan,25,medium,"Slicks, then wets about lap 20 to about 33 of 53",https://www.motorsportmagazine.com/archive/article/december-1993/10/storms-over-suzuka/,changeable
+1993,south-africa,5,low,Late downpour only; laps not stated; 72 laps,https://www.motorsportmagazine.com/archive/article/april-1993/10/just-williams/,dry
+1994,japan,100,high,"Wet throughout on wets, no drying; 50 laps",https://www.motorsportmagazine.com/archive/article/december-1994/10/down-wire/,wet
+1995,argentina,10,low,No drying or tyre detail in report; site says wet track; 72 laps,https://www.motorsportmagazine.com/archive/article/may-1995/22/argentine-grand-prix-2/,dry
+1995,san-marino,18,low,"Wet/dry race, top five on rain tyres at start; switch laps not stated; 63 laps",https://www.motorsportmagazine.com/archive/article/june-1995/14/san-marino-grand-prix-2/,dry
+1995,belgium,40,medium,Rain laps 21-25 and from 26; wets from 21-29 of 44; varied by driver,https://www.motorsportmagazine.com/archive/article/october-1995/14/belgian-grand-prix-9/,changeable
+1995,europe,16,medium,"Very damp start, most on wets; slicks about lap 11 of 67",https://www.motorsportmagazine.com/archive/article/november-1995/22/european-grand-prix-5/,dry
+1995,japan,15,high,Wet but drying; slicks laps 7-9 of 53,https://www.motorsportmagazine.com/archive/article/december-1995/20/japanese-grand-prix-2/,dry
+1996,brazil,57,medium,"Wet start; too wet for slicks at lap 35, slicks by lap 42 of 71",https://en.wikipedia.org/wiki/1996_Brazilian_Grand_Prix,wet
+1997,belgium,30,high,Wets or inters until slicks at laps 12-14 of 44,https://en.wikipedia.org/wiki/1997_Belgian_Grand_Prix,changeable
+1996,monaco,45,medium,Wets from start; slicks from about lap 30 of 75,https://en.wikipedia.org/wiki/1996_Monaco_Grand_Prix,changeable
+1996,spain,100,medium,Rain listed; poured on race day; no slick switch reported; 65 laps,https://en.wikipedia.org/wiki/1996_Spanish_Grand_Prix,wet
+1997,monaco,95,medium,Rain before start and worsening; no drying reported; 62 laps; tyre laps not stated,https://en.wikipedia.org/wiki/1997_Monaco_Grand_Prix,wet
+1997,france,10,low,Rain in closing stages only; laps not stated; 72 laps,https://en.wikipedia.org/wiki/1997_French_Grand_Prix,dry
+1998,argentina,3,low,Drizzle at end; laps not stated; 72 laps,https://en.wikipedia.org/wiki/1998_Argentine_Grand_Prix,dry
+1998,great-britain,90,medium,"Most on inters from start, full wets from about lap 16; 60 laps",https://en.wikipedia.org/wiki/1998_British_Grand_Prix,wet
+1998,belgium,100,high,Ran entirely in extremely wet weather; 44 laps,https://en.wikipedia.org/wiki/1998_Belgian_Grand_Prix,wet
+1999,france,65,medium,"Dry start; rain from lap 21, wets from about 26; 72 laps",https://en.wikipedia.org/wiki/1999_French_Grand_Prix,wet
+1999,europe,40,medium,"Rain near lap 11 then heavily about 38, most on wets then; 66 laps",https://en.wikipedia.org/wiki/1999_European_Grand_Prix,changeable
+2000,europe,82,high,"Heavy rain lap 12, field on wets laps 12-16 onward; 67 laps",https://en.wikipedia.org/wiki/2000_European_Grand_Prix,wet
+2000,canada,40,high,Wets from lap 42-46 to end of 69,https://en.wikipedia.org/wiki/2000_Canadian_Grand_Prix,changeable
+2000,germany,25,medium,Wets from about lap 33 for some; many stayed on slicks; 45 laps,https://en.wikipedia.org/wiki/2000_German_Grand_Prix,changeable
+2000,belgium,20,high,Wets or inters until stops laps 4-9 of 44,https://en.wikipedia.org/wiki/2000_Belgian_Grand_Prix,changeable
+2000,united-states,12,high,"Inters at start; most switched laps 5-7, some to 16; 73 laps",https://en.wikipedia.org/wiki/2000_United_States_Grand_Prix,dry
+2000,japan,0,high,No wet tyres used; 53 laps,https://en.wikipedia.org/wiki/2000_Japanese_Grand_Prix,dry
+2001,malaysia,30,medium,Wet running lap 4 to stops at laps 17-25 of 55,https://en.wikipedia.org/wiki/2001_Malaysian_Grand_Prix,changeable
+2001,brazil,37,medium,"Wets from about lap 45, track drying about 66; 71 laps",https://en.wikipedia.org/wiki/2001_Brazilian_Grand_Prix,changeable
+2002,great-britain,38,high,Wets laps 13-23 and 28-40 of 60,https://en.wikipedia.org/wiki/2002_British_Grand_Prix,changeable
+2003,brazil,95,high,All on wets or inters; stopped lap 54,https://en.wikipedia.org/wiki/2003_Brazilian_Grand_Prix,wet
+2003,united-states,35,medium,Inters from about lap 6; dry by laps 48-51; many stayed on dry early; 73 laps,https://en.wikipedia.org/wiki/2003_United_States_Grand_Prix,changeable
+2003,australia,8,high,Inters at start; dry tyres laps 3-7 of 58,https://en.wikipedia.org/wiki/2003_Australian_Grand_Prix,dry
+2004,malaysia,0,high,Brief shower lap 2; dry tyres all race; 56 laps,https://en.wikipedia.org/wiki/2004_Malaysian_Grand_Prix,dry
+2004,italy,9,medium,Wet parts at start; switch about lap 5 of 53,https://en.wikipedia.org/wiki/2004_Italian_Grand_Prix,dry
+2004,brazil,5,high,Inters at start; dry from about lap 4 of 71,https://en.wikipedia.org/wiki/2004_Brazilian_Grand_Prix,dry
+2005,belgium,73,medium,Listed wet and dry; laps not stated; my estimate from memory; 44 laps; pit stop data shows stop cluster at lap 32,https://en.wikipedia.org/wiki/2005_Belgian_Grand_Prix,wet
+2006,hungary,68,medium,"All on inters or wets at start; switch laps not stated, memory about lap 45 of 70; pit stop data shows late stops at laps 46-55",https://en.wikipedia.org/wiki/2006_Hungarian_Grand_Prix,wet
+2006,china,68,high,"Wets from start; dry tyres laps 35-41 of 56, rain returned at end",https://en.wikipedia.org/wiki/2006_Chinese_Grand_Prix,wet
+2007,europe,37,medium,"Inters from lap 1 until dried, again from lap 52 of 60",https://en.wikipedia.org/wiki/2007_European_Grand_Prix,changeable
+2007,japan,100,medium,Safety car first 19 laps in rain; no dry tyres reported; 67 laps,https://en.wikipedia.org/wiki/2007_Japanese_Grand_Prix,wet
+2007,china,50,low,Inters from start; about half race as far as stated; 56 laps,https://en.wikipedia.org/wiki/2007_Chinese_Grand_Prix,wet
+2008,monaco,70,high,Wets from start; stops laps 26-56 of 76,https://en.wikipedia.org/wiki/2008_Monaco_Grand_Prix,wet
+2008,great-britain,100,high,All 60 laps on wet tyres,https://en.wikipedia.org/wiki/2008_British_Grand_Prix,wet
+2008,belgium,5,high,Heavy rain from lap 41 of 44; most stayed on dry,https://en.wikipedia.org/wiki/2008_Belgian_Grand_Prix,dry
+2008,italy,100,high,All on wets or inters throughout; 53 laps,https://en.wikipedia.org/wiki/2008_Italian_Grand_Prix,wet
+2008,brazil,20,high,Inters at start to laps 2-11; again from laps 63-67 of 71,https://en.wikipedia.org/wiki/2008_Brazilian_Grand_Prix,changeable
+2009,malaysia,40,high,Rain from lap 19; stopped at lap 31,https://en.wikipedia.org/wiki/2009_Malaysian_Grand_Prix,changeable
+2009,china,100,medium,"Heavy rain, safety car 8 laps; no dry tyres reported; 56 laps",https://en.wikipedia.org/wiki/2009_Chinese_Grand_Prix,wet
+2010,australia,15,high,Inters at start; slicks laps 7-10 of 58,https://en.wikipedia.org/wiki/2010_Australian_Grand_Prix,dry
+2010,china,70,medium,Inters from lap 3 or 21; final inter stops laps 36-38 of 56,https://en.wikipedia.org/wiki/2010_Chinese_Grand_Prix,wet
+2010,belgium,23,medium,Some inters laps 2-3; wets from lap 35 of 44,https://en.wikipedia.org/wiki/2010_Belgian_Grand_Prix,changeable
+2010,korea,100,high,"Full wets then inters, no dry tyres reported; 55 laps",https://en.wikipedia.org/wiki/2010_Korean_Grand_Prix,wet
+2011,canada,65,high,Wets or inters lap 1 to about 46 of 70,https://en.wikipedia.org/wiki/2011_Canadian_Grand_Prix,wet
+2011,great-britain,20,low,"All on inters at start; laps not stated, dried fairly early; 52 laps",https://en.wikipedia.org/wiki/2011_British_Grand_Prix,changeable
+2011,hungary,14,medium,All on inters at start; track dried early; brief shower later; 70 laps,https://en.wikipedia.org/wiki/2011_Hungarian_Grand_Prix,dry
+2012,malaysia,70,high,Wets or inters until slicks laps 37-42 of 56,https://en.wikipedia.org/wiki/2012_Malaysian_Grand_Prix,wet
+2013,malaysia,12,high,Inters at start; dry tyres by about lap 8 of 56,https://en.wikipedia.org/wiki/2013_Malaysian_Grand_Prix,dry
+2014,hungary,14,high,Inters at start; dry tyres under safety car laps 9-10 of 70,https://en.wikipedia.org/wiki/2014_Hungarian_Grand_Prix,dry
+2014,japan,100,high,Full wets then inters throughout; stopped at lap 44,https://en.wikipedia.org/wiki/2014_Japanese_Grand_Prix,wet
+2015,great-britain,15,medium,Rain from laps 33-34; wets from lap 39-44 of 52,https://en.wikipedia.org/wiki/2015_British_Grand_Prix,dry
+2015,united-states,30,medium,Inters until slicks laps 18-20 of 56,https://en.wikipedia.org/wiki/2015_United_States_Grand_Prix,changeable
+2016,monaco,35,medium,"Full wets to lap 7, inters to about lap 24-31 of 78",https://en.wikipedia.org/wiki/2016_Monaco_Grand_Prix,changeable
+2016,great-britain,35,medium,Wets or inters until slicks laps 16-20 of 52,https://en.wikipedia.org/wiki/2016_British_Grand_Prix,changeable
+2016,brazil,95,low,"Very wet, two red flags; tyres not stated; my estimate from memory; 71 laps",https://en.wikipedia.org/wiki/2016_Brazilian_Grand_Prix,wet
+2017,china,5,high,Inters to laps 3-4 of 56,https://en.wikipedia.org/wiki/2017_Chinese_Grand_Prix,dry
+2017,singapore,48,medium,"Full wets to lap 4, inters after; slicks not stated; memory about lap 12 of 58; pit stop data shows slick stops clustered at laps 27-29",https://en.wikipedia.org/wiki/2017_Singapore_Grand_Prix,changeable

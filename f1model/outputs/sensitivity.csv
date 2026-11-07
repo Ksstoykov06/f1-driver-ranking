@@ -1,0 +1,8 @@
+scenario,pipeline,spearman_vs_base,top5
+collisions count as errors,B,0.9951612903225807,"Max Verstappen, Lewis Hamilton, Lando Norris, Fernando Alonso, Charles Leclerc"
+collisions count as errors,A,0.9903225806451613,"Max Verstappen, Charles Leclerc, Lewis Hamilton, Lando Norris, Fernando Alonso"
+exclude 2026,B,0.9830769230769232,"Max Verstappen, Lewis Hamilton, Fernando Alonso, Lando Norris, Charles Leclerc"
+exclude 2026,A,0.9523076923076922,"Max Verstappen, Lewis Hamilton, Charles Leclerc, Fernando Alonso, Lando Norris"
+race laps in traffic kept,A,0.9620967741935484,"Max Verstappen, Charles Leclerc, Lando Norris, Lewis Hamilton, Fernando Alonso"
+wider wet definition (10% of laps),B,0.997177419354839,"Max Verstappen, Lewis Hamilton, Lando Norris, Fernando Alonso, Charles Leclerc"
+wider wet definition (10% of laps),A,0.9919354838709677,"Max Verstappen, Charles Leclerc, Lando Norris, Lewis Hamilton, Fernando Alonso"

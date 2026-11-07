@@ -1,0 +1,192 @@
+<main>
+<header style="display:grid;gap:14px">
+<h1>F1 Driver Model: Results</h1>
+<p class="lede">How good each driver was once the car is taken out, and what they did with the cars they actually had. Results to review, not a final answer.</p>
+</header>
+
+<section>
+<h2>Where it stands</h2>
+<p id="status"></p>
+<p class="note">Treat close positions as ties. The ranges below are wide, and the top few drivers overlap with each other. The ordering depends mostly on comparing teammates, so a driver with few strong teammates is measured less precisely.</p>
+</section>
+
+<section>
+<h2>The final ranking, in tiers</h2>
+<p>Drivers inside a tier can't be reliably separated. Each tier starts with the best-placed driver still unplaced, and anyone with at least a 25% chance of really being better than that driver joins the tier. Order inside a tier is by typical rank, but it's close to a coin toss. Peak score is the simulated finishing position in an identical car over the best three straight seasons, so lower is better. Career score adds up how far above a midfield finish each season was, weighted by races.</p>
+<h3>All-time peak, from 1950 (25+ starts)</h3>
+<div class="tw"><table id="tTierPeak"></table></div>
+<p class="note">▲ likely inflated, △ possibly inflated, because the model may rate that driver's car too low (see the next table). The teammate-removal reruns show a similar effect for drivers who were alone in a strong car: Hamilton, Mansell and Hill each improve when one teammate is taken out.</p>
+<h3>Early drivers: is the car being credited to the driver?</h3>
+<p>Before the late 1960s, fields were small, teams often ran only one or two regular drivers, and many entries were one-offs. That leaves little to separate car from driver. When the model rates a car lower than it really was, the missing speed goes to the driver, and his peak score looks better than it should. For each early driver near the top, the table compares the model's car rank in each peak season with where the team really finished on points (8-6-4-3-2 for the top five).</p>
+<div class="tw"><table id="tEarlyCars"></table></div>
+<p class="note">One caution: a team's real points include the driver's own results. A great driver lifts his team's finishing position, so some of each gap really is the driver. The model can't settle how much, which is why these are warnings and not corrections. The scores themselves are unchanged.</p>
+<h3>Combined 50/50 peak and career, from 1970 (40+ starts)</h3>
+<div class="tw"><table id="tTierComb"></table></div>
+<p class="note">Only seasons from 1970 count here, so Stewart's peak is his last three years. Clark, Fangio and the other early drivers are left out.</p>
+<h3>Career, from 1970</h3>
+<div class="tw"><table id="tTierCar"></table></div>
+<p class="note">The ranges come from each driver's published 90% interval, treated as independent. Drivers who share cars or eras are really linked, so the true tiers are probably a bit tighter than this. The carry-over test (where a car's speed carries into the next year) is the assumption that moves the top most. Under it Senna leads peak and Hamilton's peak improves from 6.6 to 4.6, level with tier 1. Treat tier 1 and the top of tier 2 as one group if you want a cautious reading.</p>
+</section>
+
+<section>
+<h2>What changed since the first walkthrough</h2>
+<div class="tw"><table id="tChanges"></table></div>
+</section>
+
+<section>
+<h2>The check that failed, and the fix</h2>
+<p>A car ranking can be tested against something the model never sees: the constructors' championship. The first full run, before 1970 was added, did well overall but placed Ferrari as the best car of 1980, when it finished 10th, and Brabham 7th or 8th in years Piquet won the title. So Piquet took the top five places on the "beyond the car" list. Two changes fixed most of it: each car now builds on the team's previous car, not its all-time average, and earlier seasons are fitted as a warm-up, now 1966–69, so the first reported year has history behind it. The early 1970s remain the weakest stretch on this check, at 0.61 for 1970–75 and 0.23 for 1971, when the model makes Lotus the best car though it finished 5th. Linking customer teams to their own later cars and trying a longer warm-up from 1961 didn't clearly fix this, so those seasons carry a warning.</p>
+<div class="fig"><div class="figt">How closely the model's car order matches the constructors' table, each season</div><div class="figs">Rank correlation, where 1 is an identical order. Some gap is expected, because the constructors' table also reflects the drivers.</div><div class="legend"><span><i style="background:var(--a)"></i>Revised model</span><span><i style="background:var(--fg3)"></i>First full run</span></div><div class="chart" id="cCheck"></div></div>
+<div class="tw"><table id="tCheck"></table></div>
+</section>
+
+<section>
+<h2>Drivers without the best car</h2>
+<p>This is the comparison you called most important. For every season, the model puts the real drivers in their real cars, then swaps one for an average driver in the same seat. The gain is how many places that driver is worth, on average, over that average driver.</p>
+<p class="note">Gain has a ceiling: a car already good enough for P2 can't gain more than one place. So gains in the best cars are understated, and this list shouldn't be read alone. Use it together with the identical-car scores in the next section.</p>
+<div class="fig"><div class="figt">Places gained beyond the car, season by season</div><div class="figs">Each dot is one season, with its 90% range. The number under it is that car's rank in its season, so you can see who gained in which car.</div><div class="ctl"><label>Driver 1 <select id="s1"></select></label><label>Driver 2 <select id="s2"></select></label></div><div class="legend"><span><i style="background:var(--a)"></i><span id="l1"></span></span><span><i style="background:var(--b)"></i><span id="l2"></span></span></div><div class="chart" id="cGain"></div></div>
+<h3>2012 as a test case</h3>
+<p>The model wasn't tuned to produce any result for Alonso. Here is what it says about that season.</p>
+<div class="tw"><table id="t2012"></table></div>
+<p id="n2012"></p>
+<h3>Best cars against lesser cars</h3>
+<p>The same drivers, split by the car they had. "Lesser" means a car ranked 4th or lower that season. Only seasons with at least 8 starts count.</p>
+<div class="tw"><table id="tCars"></table></div>
+</section>
+
+<section>
+<h2>Peak and career, kept separate</h2>
+<p><b>Peak</b> is the best three consecutive seasons, scored as average finish in a 20-car field if everyone had the same car. Lower is better. <b>Career</b> adds up places gained on an average driver across every season since 1970, with 22 starts counting as one season, so it rewards lasting a long time as well as being good.</p>
+<div class="ctl" id="mCtl"></div>
+<div class="two"><div class="fig"><div class="figt">Peak: average finish in identical cars</div><div class="figs">Dots further right are better. Bars show the 90% range.</div><div class="chart" id="cPeak"></div></div>
+<div class="fig"><div class="figt">Career: total places gained</div><div class="figs">Dots further right are better. Bars show the 90% range.</div><div class="chart" id="cCareer"></div></div></div>
+<p class="note" id="nPeak"></p>
+<div class="fig"><div class="figt">Careers season by season (1970+ model)</div><div class="figs">Average finish in identical cars, with the 90% range shaded. Schumacher's 2010 comeback is allowed a bigger change in level than a normal year, because of the three years out and the new rules.</div><div class="ctl"><label>Driver <select id="s3"></select></label></div><div class="chart" id="cSeason"></div></div>
+</section>
+
+<section>
+<h2>All-time peak, from 1950</h2>
+<p>This comes from a separate run fitted on every season from 1950 to 2026. Only peak is compared across all eras, because it doesn't depend on how many races a season had. Drivers with 25+ starts and three consecutive scored seasons are included, so Ascari and Farina can appear. Lower is better.</p>
+<div class="fig"><div class="figt">Peak from 1950: average finish in identical cars</div><div class="figs">Dots further right are better. Bars show the 90% range. Treat anything before 1966 with extra caution.</div><div class="chart" id="cAll"></div></div>
+<div class="tw"><table id="tAll"></table></div>
+<p class="note">Scores for later drivers differ slightly from the 1970+ section because this is a different run. The two orders still agree closely (.986). Graham Hill moves most, from P9.9 to P5.4, because his 1963–65 seasons now count.</p>
+<h3>Why Fangio isn't simply first</h3>
+<p>The car order matches each season's results reasonably well (.81 for 1950–57), but those results are also what the model is fitted to, and there was no constructors' title before 1958. The clearer warning is that some champion cars are rated too low. The model then credits the driver instead, so Fangio and Clark probably score too well, by an amount not yet measured.</p>
+<div class="tw"><table id="tDom"></table></div>
+<h3>Early careers, listed separately</h3>
+<p>Calendars had 6–10 races, so career totals can't be compared fairly with modern ones. These totals cover the whole careers of drivers who started before 1966. Those who raced on past 1970, such as Stewart and Graham Hill, also appear in the career and combined rankings, but only with their seasons from 1970. Totals below are best compared with each other, and even then season lengths differ. Average is the career average finish in identical cars.</p>
+<div class="tw"><table id="tEarly"></table></div>
+</section>
+
+<section>
+<h2>Combined ranking</h2>
+<p>You wanted one combined score too, and chose 50/50 for now. Peak and career are each scaled so the best driver is 1, then blended. The table is in 50/50 order, with 75% and 25% peak alongside it, because the weighting is a judgement the data can't make. It ranks only drivers with 40+ starts and a peak score, and it uses the 1970+ run, so drivers from before then are listed in the section above instead.</p>
+<div class="tw"><table id="tComb"></table></div>
+<p class="note">Schumacher is first under all three. Stewart, Lauda and others lose career points because their years before 1970 aren't counted, and Senna's career total stops in 1994, as you pointed out. So heavier career weights hurt them for reasons unrelated to ability, which is one reason to keep peak well represented.</p>
+</section>
+
+<section>
+<h2>Adaptability</h2>
+<p>This measures how many places a driver loses in their first race after a change, compared with the typical driver, fading over about six races. It's counted within the scores above, and is shown here separately. Left of zero means the driver adapted better than typical.</p>
+<div class="ctl" id="adCtl"></div>
+<div class="fig"><div class="figt">Places lost in the first race after a change, relative to the typical driver</div><div class="figs">Most ranges include zero, so few individual drivers are clearly different from typical. Shows the 16 best-adapting drivers with at least 3 changes, plus Schumacher, Alonso and Hamilton for comparison.</div><div class="chart" id="cAdapt"></div></div>
+<p class="note" id="nAdapt"></p>
+</section>
+
+<section>
+<h2>Wet running</h2>
+<p id="wetText"></p>
+<div class="ctl" id="wCtl"></div>
+<div class="fig"><div class="figt">Race pace in wet and changeable races, beyond dry race skill</div><div class="figs">Further right is better. The 14 highest of drivers with 40+ starts. Zero means no better or worse than the driver's dry form. These are weak signals, so don't read them as a ranking.</div><div class="chart" id="cWet"></div></div><p id="nButton"></p>
+</section>
+
+<section>
+<h2>Team orders</h2>
+<p>The radio files available have audio links only, with no transcripts and nothing before 2018, so this uses a written list of clear cases that you can edit. Clear swaps are reversed, as with "Fernando is faster than you". When a driver was told to hold position, as with "Valtteri, it's James", that driver's result is removed, because we can't know if they'd have passed. Unclear cases count for neither driver. Orders given when the driver was already behind, like Pérez at Abu Dhabi 2021, are deliberately left out.</p>
+<div class="tw"><table id="tOrders"></table></div>
+</section>
+
+<section>
+<h2>How far to trust it</h2>
+<h3>Predicting races it hasn't seen</h3>
+<p>Every fifth round was hidden, then the model predicted which of two teammates would finish ahead.</p>
+<div class="tw"><table id="tHold"></table></div>
+<h3>Recovering known answers</h3>
+<p>Fake seasons were generated with known driver skills. "Order recovered" is the rank correlation with the truth, and the 90% range should contain the truth about 90% of the time. For the 1970+ model these are from one simulation of the final version. Repeats on the previous version varied by about 0.1–0.2 for wet, changeable and adaptability, so read those as rough. Qualifying and race skill barely moved.</p>
+<div class="tw"><table id="tSyn"></table></div>
+<h3>Changing the assumptions</h3>
+<p>Each row reruns the model with one assumption changed, then compares its order with the main run's. The 1970+ tests use shorter chains than the main run, so small swaps near the top can be noise.</p>
+<div class="tw"><table id="tSens"></table></div>
+<h3>Known weak spots</h3>
+<ul style="margin:0;padding-left:20px;display:grid;gap:6px;max-width:68ch">
+<li><b>Dominant cars before 1966.</b> With few teammates close enough to compare, the model can't fully split a great driver from a great car. It rates Mercedes 1954 and Lotus 1962–63 below Ferrari, despite their results. This probably flatters Fangio and Clark. The same issue applies to Schumacher, but less sharply.</li>
+<li><b>Thin 1950s evidence.</b> Only 28 qualifying and 19 race teammate pairs were held out for that decade. Some 30% of entries in 1950–60 had no teammate in the race, shared cars are unranked, and team orders from then aren't modelled. Six wet shares are estimates, and changeable scores before 1966 aren't reliable (90% ranges hit only 62%).</li>
+<li><b>Low scores not explained.</b> Tony Brooks (P10.3) and Phil Hill (P10.7) look low. That could be real, since both were measured against strong teammates, or it could be a limit of the data.</li>
+<li><b>Careers cut off at 1970.</b> In the career and combined rankings, Stewart, Ickx, Regazzoni and others are only scored from 1970, so their totals are understated. The all-time peak table doesn't have this problem.</li>
+<li><b>1970s skew.</b> Adding the 1970s barely moved the order of later drivers (0.99), but drivers in the 1970s average better scores than later decades (P9.9 against about P10.5–11.0). That may be real or may come from thinner fields and weaker links between eras, so compare 1970s scores with later ones cautiously. Lauda shows how much coverage matters: his peak moved from P8.2 to P5.7 once his Ferrari years were included.</li>
+<li><b>Customer cars.</b> Before 1983, privateers are separated from works teams using a rule and a short hand-written list of works entries and team links, partly from my own knowledge, so a few teams may be split or linked wrongly.</li>
+<li><b>Linked comparisons.</b> Drivers from different eras only connect through chains of shared teammates, so the gap between, say, the 1980s and the 2020s is the least certain number here.</li>
+<li><b>Long careers.</b> Career totals favour longevity, so read them alongside the career average in the file, not as a measure of who was best.</li>
+<li><b>Reliability.</b> Mechanical failures are removed, so a driver who nursed a car home gets no credit for it.</li>
+<li><b>2018+ laps model convergence.</b> The long run settled this: worst R-hat 1.0003 and at least about 6,600 effective samples. The first run's scores were already close (average peak change 0.10). Longer chains remove computing noise, not the uncertainty in the data, so the ranges stayed about as wide (about 4 finishing places on peak).</li>
+<li><b>Hand-written inputs.</b> The pre-2018 wet races are estimated from race reports and spot-checked with tyre data on six 2018+ races and pit stop timing. The 1966–68 warm-up wet races were checked against race reports, though those describe track conditions more than tyres. The team orders list hasn't been checked against reports.</li>
+</ul>
+</section>
+
+<section>
+<h2>Qualifying times rerun</h2>
+<p>This rerun uses how far behind each driver was in qualifying as well as the order, measured against the fastest driver in the last session he took part in. The gap is capped at 10%, which affects 22% of 1950s entries. It uses the 1950+ data, with a matching fit without times (R-hat 1.04 and 1.02).</p>
+<div class="tw"><table><thead><tr><th>Held-out test (lower is better)</th><th>Without times</th><th>With times</th></tr></thead><tbody>
+<tr><td>Qualifying, all pairs</td><td>.3584</td><td>.3559</td></tr><tr><td>Qualifying, teammates</td><td>.5609</td><td>.5612</td></tr><tr><td>Race, all pairs</td><td>.3684</td><td>.3686</td></tr><tr><td>Race, teammates</td><td>.5752</td><td>.5745</td></tr>
+<tr><td>Car check vs constructors' (higher is better)</td><td>.857</td><td>.850</td></tr><tr><td>Car check, 1966–75</td><td>.594</td><td>.572</td></tr><tr><td>Best car top 2 in constructors'</td><td>95.1%</td><td>93.4%</td></tr></tbody></table></div>
+<p>The qualifying gain just misses the 90% noise test (−.0049 to +.0001). It comes from the 1960s to 1990s, and there's none from 2000 on. 1950s teammates get worse (.592 to .607).</p>
+<div class="tw"><table><thead><tr><th>All-time peak</th><th>Without times</th><th>With times</th></tr></thead><tbody>
+<tr><td>Fangio</td><td>4.35 (1st)</td><td>4.42 (1st)</td></tr><tr><td>Clark</td><td>4.57 (3rd)</td><td>4.56 (2nd)</td></tr><tr><td>Senna</td><td>4.61 (4th)</td><td>5.03 (3rd)</td></tr><tr><td>Stewart</td><td>5.01 (5th)</td><td>5.10 (4th)</td></tr><tr><td>Schumacher</td><td>4.45 (2nd)</td><td>5.10 (5th)</td></tr><tr><td>Lauda</td><td>5.57 (8th)</td><td>6.15 (11th)</td></tr><tr><td>Alonso</td><td>6.18 (10th)</td><td>6.12 (9th)</td></tr><tr><td>Hamilton</td><td>6.59 (14th)</td><td>6.57 (14th)</td></tr></tbody></table></div>
+<p><b>How much it moved.</b> Across 171 drivers, peak order correlates .991 and career order .976. Scores moved .19 on average. Two fits with no change in method (C50 against this one's base) differ by .11, so about half of this is ordinary fit noise. A typical 90% range is about 4 places wide. The career top 10 keeps its order.</p>
+<p><b>Why it moves.</b> Only partly explained. The obvious explanation is that winning close battles flatters a driver in an order-only model. I tested that on peak seasons, and the teammate record and gap explain only 3% of the moves, so it isn't supported. The better clue is that car and driver tend to move together (correlation about .13). For McLaren in 1988–89, and Ferrari for Lauda, both the car and the driver fall, which suggests times show the whole package was less far ahead than the finishing order implied. At Red Bull in 2010–11, both rise for Webber. That is a likely explanation, not a proven one. The time signal also differs by era: a unit of skill is worth about 1.1% in the 1950s and .14% from 2000.</p>
+</section>
+
+<section>
+<h2>Letting cars be properly dominant</h2>
+<p>The worry was that the model squeezes car ratings towards the middle, so the most dominant cars get rated too low and their drivers get too much credit. I tested four changes on the 1950+ data, each scored on held-out races (every fifth round) and against the constructors' table.</p>
+<div class="tw"><table><thead><tr><th>Change</th><th>Qualifying, all pairs</th><th>Race, all pairs</th><th>Car check</th><th>Car check 1966–75</th><th>Fit settled (R-hat)</th><th>Verdict</th></tr></thead><tbody>
+<tr><td>Current model</td><td>.3584</td><td>.3684</td><td>.857</td><td>.594</td><td>1.01</td><td>Kept</td></tr>
+<tr><td>Heavy tails, learned from the data</td><td>.3584</td><td>.3686</td><td>.857</td><td>.582</td><td>1.02 / 1.07</td><td>No gain</td></tr>
+<tr><td>Heavy tails, forced very heavy</td><td>.3588</td><td>.3690</td><td>not run</td><td>not run</td><td>1.08</td><td>Rejected</td></tr>
+<tr><td>Weaker car carry-over (.3 instead of about .8)</td><td>.3588</td><td>.3718</td><td>.816</td><td>.579</td><td>2.11 / 1.13</td><td>Rejected, kept as a test</td></tr>
+<tr><td>Tighter driver form (half the year-to-year change)</td><td>.3592</td><td>.3684</td><td>.856*</td><td>.569*</td><td>1.02</td><td>No gain</td></tr>
+</tbody></table></div>
+<p>Lower is better for the first two columns, higher for the car checks. *Held-out fit only; the full-data fit hit the 2-hour limit, so its effect on the rankings is unknown. The held-out current model scores .856 and .590 on the same check.</p>
+<p><b>Heavy tails.</b> Letting a few cars sit far from the rest changed almost nothing. The data barely pinned down how heavy the tails should be, peak order held at .996 and career at .993, and the suspect cars (Mercedes 1954, Lotus 1962) didn't move.</p>
+<p><b>Carry-over is the assumption that matters most.</b> The data prefers strong carry-over, and forcing it weaker made prediction and the car check worse while leaving Lotus 1962 still .85 behind Ferrari. But it moved the rankings more than anything else tested: peak order fell to .96 and career to .89. Hamilton's peak goes from 6.59 to 4.62, Lauda's from 5.57 to 4.56, and Senna moves to first at 3.78. Weak carry-over shrinks the most dominant cars (Williams 1992's edge falls from 3.44 to 2.80) and hands that credit to their drivers. That fit didn't fully settle, so treat those numbers as rough. It's the main reason the tiers below are wide.</p>
+
+<h2>Removing a teammate</h2>
+<p>For 15 leading drivers I removed their main teammate from the races they shared, refitted the whole model, and checked how far the leading driver moved. The question is whether a high rating rests on beating one weak or one strong teammate. Two fits with nothing changed differ by about .11 on peak, so moves of that size are noise.</p>
+<div class="tw"><table id="tTm"></table></div>
+<p>Sorted by size of move. Peak is the average finish in identical cars, lower is better. Ranks count drivers with 25+ starts from 1950.</p>
+<p><b>Most leading drivers don't depend on one teammate.</b> 11 of 15 moved .21 or less, about the same as noise. That includes Alonso without Massa or Stroll, Schumacher without Barrichello, Verstappen without Pérez, and Senna without either Prost or Berger.</p>
+<p><b>Prost is the exception the other way.</b> Removing 1988–89 makes Prost's peak .78 worse (18th to 28th) even though his best seasons, 1984–86, are untouched. Two seasons nearly matching Senna were the strongest evidence that he was elite, and they carried back through his whole career.</p>
+<p><b>A lone driver in a strong car gets flattered.</b> Hamilton without Rosberg (−.64), Mansell without Patrese (−.83) and Hill without Ginther (−.48) all improve, and each driver's best seasons move to the years he shared. With no teammate in the 2014–16 Mercedes, the 1991–92 Williams or the 1962–64 BRM, the model can't split car from driver directly, so it credits part of the car to the driver. Vettel without Webber is the exception (+.11), probably because Red Bull's 2014 season with Ricciardo gives an outside check on that car. This is the same effect as the dominant-car test, seen from the other side. It means drivers with a close teammate in their best car are, if anything, rated a little harshly next to those without one.</p>
+
+<h2>Checking against lap times</h2>
+<p>The main model sees only finishing and qualifying positions. From 2018 there's lap-time data it never used, so that's an independent check on both its car and driver ratings.</p>
+<div class="tw"><table><thead><tr><th>Check, 2018–2026</th><th>Result</th></tr></thead><tbody>
+<tr><td>Car rating vs team's average dry qualifying pace (91 team-seasons)</td><td>rank correlation .95 (.93 within a season)</td></tr>
+<tr><td>Car rating vs team's average dry race pace</td><td>.93 (.91 within a season)</td></tr>
+<tr><td>Teammate gap in the model vs teammate gap in qualifying laps (94 pairings)</td><td>correlation .79, same driver ahead 77%</td></tr>
+<tr><td>Teammate gap in the model vs teammate gap in race laps (93 pairings)</td><td>correlation .82, same driver ahead 80%</td></tr>
+<tr><td>Season scores vs the lap-time model (183 driver-seasons)</td><td>correlation .90</td></tr>
+<tr><td>Peak from 2018 only, vs the lap-time model (25 drivers)</td><td>rank correlation .91</td></tr>
+</tbody></table></div>
+<p><b>The car ratings hold up well.</b> The biggest misses are at the extremes: the 2020 Mercedes is rated even further ahead than its lap pace suggests, and Cadillac and Aston Martin in 2026 and Williams in 2019 further behind. Positions can't show how far ahead or behind a car is once it's always first or last, so the model extrapolates there.</p>
+<p><b>Drivers in slow cars are the weak spot.</b> The lap model rates Russell and Albon at Williams, Mick Schumacher at Haas and Gasly better than finishing positions do. Finishing 18th instead of 19th says little about how well someone drove. Both methods put Verstappen first, Hamilton second and Leclerc and Norris next from 2018. So the positions model is trustworthy for drivers who spent their best years in competitive cars, which covers almost everyone near the top of the all-time list, and less so for drivers stuck at the back.</p>
+<h2>What to improve next</h2>
+<div class="dec" id="imp"></div>
+</section>
+
+<section>
+<h2>Decisions for you</h2>
+<div class="dec" id="dec"></div>
+</section>
+</main>
+<div id="tip" hidden></div>

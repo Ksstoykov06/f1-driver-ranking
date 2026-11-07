@@ -1,0 +1,6 @@
+session,era,model,n,accuracy,log_loss
+qualifying,all,A18,333,0.7327327327327328,0.5404821549804032
+qualifying,all,Head-to-head so far,333,0.7117117117117117,0.5391224402384266
+race,all,A18,250,0.744,0.5504608873009802
+race,all,Head-to-head so far,250,0.6,0.6112695843876881
+race,all,Better grid,250,0.72,0.5929533174474745

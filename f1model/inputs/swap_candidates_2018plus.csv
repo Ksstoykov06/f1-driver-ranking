@@ -1,0 +1,321 @@
+season,gp,lap,team,passed,was_passed,final_passed,final_was_passed
+2018,abu-dhabi,16,force-india,Sergio Pérez,Esteban Ocon,8.0,
+2018,abu-dhabi,33,toro-rosso,Pierre Gasly,Brendon Hartley,,12.0
+2018,austria,60,force-india,Sergio Pérez,Esteban Ocon,7.0,6.0
+2018,austria,70,force-india,Esteban Ocon,Sergio Pérez,6.0,7.0
+2018,austria,13,sauber,Charles Leclerc,Marcus Ericsson,9.0,10.0
+2018,austria,67,sauber,Marcus Ericsson,Charles Leclerc,10.0,9.0
+2018,austria,70,sauber,Charles Leclerc,Marcus Ericsson,9.0,10.0
+2018,austria,27,toro-rosso,Pierre Gasly,Brendon Hartley,11.0,
+2018,azerbaijan,6,red-bull,Max Verstappen,Daniel Ricciardo,,
+2018,azerbaijan,35,red-bull,Daniel Ricciardo,Max Verstappen,,
+2018,brazil,35,ferrari,Kimi Räikkönen,Sebastian Vettel,3.0,6.0
+2018,brazil,69,toro-rosso,Brendon Hartley,Pierre Gasly,11.0,13.0
+2018,great-britain,42,williams,Lance Stroll,Sergey Sirotkin,12.0,14.0
+2018,china,52,force-india,Sergio Pérez,Esteban Ocon,12.0,11.0
+2018,china,56,force-india,Esteban Ocon,Sergio Pérez,11.0,12.0
+2018,china,39,red-bull,Daniel Ricciardo,Max Verstappen,1.0,5.0
+2018,china,40,sauber,Marcus Ericsson,Charles Leclerc,16.0,19.0
+2018,germany,39,ferrari,Sebastian Vettel,Kimi Räikkönen,,3.0
+2018,germany,34,sauber,Charles Leclerc,Marcus Ericsson,15.0,9.0
+2018,mexico,54,toro-rosso,Pierre Gasly,Brendon Hartley,10.0,14.0
+2018,monaco,55,renault,Nico Hülkenberg,Carlos Sainz Jr.,8.0,10.0
+2018,russia,26,force-india,Sergio Pérez,Esteban Ocon,10.0,9.0
+2018,russia,37,force-india,Esteban Ocon,Sergio Pérez,9.0,10.0
+2018,russia,25,mercedes,Lewis Hamilton,Valtteri Bottas,1.0,2.0
+2018,russia,6,renault,Nico Hülkenberg,Carlos Sainz Jr.,12.0,17.0
+2018,singapore,33,toro-rosso,Pierre Gasly,Brendon Hartley,13.0,17.0
+2019,austria,70,renault,Daniel Ricciardo,Nico Hülkenberg,12.0,13.0
+2019,bahrain,39,renault,Nico Hülkenberg,Daniel Ricciardo,17.0,18.0
+2019,bahrain,34,toro-rosso,Alexander Albon,Daniil Kvyat,9.0,12.0
+2019,bahrain,22,williams,George Russell,Robert Kubica,15.0,16.0
+2019,belgium,27,ferrari,Charles Leclerc,Sebastian Vettel,1.0,4.0
+2019,belgium,41,haas,Kevin Magnussen,Romain Grosjean,12.0,13.0
+2019,belgium,31,toro-rosso,Daniil Kvyat,Pierre Gasly,7.0,9.0
+2019,brazil,51,mclaren,Carlos Sainz Jr.,Lando Norris,3.0,8.0
+2019,great-britain,45,toro-rosso,Daniil Kvyat,Alexander Albon,9.0,12.0
+2019,china,11,ferrari,Sebastian Vettel,Charles Leclerc,3.0,5.0
+2019,france,47,toro-rosso,Daniil Kvyat,Alexander Albon,14.0,15.0
+2019,france,18,williams,George Russell,Robert Kubica,19.0,18.0
+2019,germany,34,haas,Romain Grosjean,Kevin Magnussen,7.0,8.0
+2019,germany,51,williams,Robert Kubica,George Russell,10.0,11.0
+2019,hungary,68,ferrari,Sebastian Vettel,Charles Leclerc,3.0,4.0
+2019,hungary,61,toro-rosso,Alexander Albon,Daniil Kvyat,10.0,15.0
+2019,italy,42,mercedes,Valtteri Bottas,Lewis Hamilton,2.0,3.0
+2019,italy,5,renault,Daniel Ricciardo,Nico Hülkenberg,4.0,5.0
+2019,japan,49,racing-point,Sergio Pérez,Lance Stroll,8.0,9.0
+2019,japan,25,toro-rosso,Pierre Gasly,Daniil Kvyat,7.0,10.0
+2019,mexico,33,haas,Kevin Magnussen,Romain Grosjean,15.0,17.0
+2019,russia,33,alfa-romeo,Kimi Räikkönen,Antonio Giovinazzi,13.0,15.0
+2019,russia,21,renault,Nico Hülkenberg,Daniel Ricciardo,10.0,
+2019,russia,36,toro-rosso,Daniil Kvyat,Pierre Gasly,12.0,14.0
+2019,singapore,49,alfa-romeo,Antonio Giovinazzi,Kimi Räikkönen,10.0,
+2019,spain,12,ferrari,Charles Leclerc,Sebastian Vettel,5.0,4.0
+2019,spain,36,ferrari,Sebastian Vettel,Charles Leclerc,4.0,5.0
+2019,spain,53,haas,Kevin Magnussen,Romain Grosjean,7.0,10.0
+2019,spain,56,renault,Daniel Ricciardo,Nico Hülkenberg,12.0,13.0
+2019,spain,11,williams,George Russell,Robert Kubica,17.0,18.0
+2019,united-states,52,mclaren,Lando Norris,Carlos Sainz Jr.,7.0,8.0
+2019,united-states,52,mercedes,Valtteri Bottas,Lewis Hamilton,1.0,2.0
+2019,united-states,6,williams,George Russell,Robert Kubica,17.0,
+2020,70th-anniversary,50,mercedes,Lewis Hamilton,Valtteri Bottas,2.0,3.0
+2020,abu-dhabi,17,alfa-romeo,Kimi Räikkönen,Antonio Giovinazzi,12.0,16.0
+2020,abu-dhabi,6,renault,Daniel Ricciardo,Esteban Ocon,7.0,9.0
+2020,austria,18,alfa-romeo,Kimi Räikkönen,Antonio Giovinazzi,,9.0
+2020,bahrain,28,alfa-romeo,Antonio Giovinazzi,Kimi Räikkönen,16.0,15.0
+2020,bahrain,29,renault,Daniel Ricciardo,Esteban Ocon,7.0,9.0
+2020,bahrain,9,williams,George Russell,Nicholas Latifi,12.0,14.0
+2020,belgium,6,haas,Romain Grosjean,Kevin Magnussen,15.0,17.0
+2020,eifel,39,ferrari,Charles Leclerc,Sebastian Vettel,7.0,11.0
+2020,eifel,33,mclaren,Carlos Sainz Jr.,Lando Norris,5.0,
+2020,emilia-romagna,6,mclaren,Carlos Sainz Jr.,Lando Norris,7.0,8.0
+2020,portugal,20,mercedes,Lewis Hamilton,Valtteri Bottas,1.0,2.0
+2020,russia,25,renault,Daniel Ricciardo,Esteban Ocon,5.0,7.0
+2020,sakhir,70,mercedes,George Russell,Valtteri Bottas,9.0,8.0
+2020,sakhir,56,racing-point,Sergio Pérez,Lance Stroll,1.0,3.0
+2020,spain,25,williams,George Russell,Nicholas Latifi,17.0,18.0
+2020,styria,59,alfa-romeo,Kimi Räikkönen,Antonio Giovinazzi,11.0,14.0
+2020,styria,45,alphatauri,Daniil Kvyat,Pierre Gasly,10.0,15.0
+2020,styria,11,haas,Romain Grosjean,Kevin Magnussen,13.0,12.0
+2020,styria,22,haas,Kevin Magnussen,Romain Grosjean,12.0,13.0
+2020,styria,48,haas,Romain Grosjean,Kevin Magnussen,13.0,12.0
+2020,styria,65,haas,Kevin Magnussen,Romain Grosjean,12.0,13.0
+2020,styria,61,mclaren,Lando Norris,Carlos Sainz Jr.,5.0,9.0
+2020,styria,45,racing-point,Sergio Pérez,Lance Stroll,6.0,7.0
+2020,styria,19,renault,Daniel Ricciardo,Esteban Ocon,8.0,
+2020,styria,53,williams,George Russell,Nicholas Latifi,16.0,17.0
+2020,turkey,58,ferrari,Sebastian Vettel,Charles Leclerc,3.0,4.0
+2020,turkey,52,red-bull,Max Verstappen,Alexander Albon,6.0,7.0
+2021,abu-dhabi,5,aston-martin,Sebastian Vettel,Lance Stroll,11.0,13.0
+2021,austria,65,ferrari,Carlos Sainz Jr.,Charles Leclerc,5.0,8.0
+2021,azerbaijan,38,williams,George Russell,Nicholas Latifi,17.0,16.0
+2021,bahrain,20,aston-martin,Lance Stroll,Sebastian Vettel,10.0,15.0
+2021,great-britain,40,mercedes,Lewis Hamilton,Valtteri Bottas,1.0,3.0
+2021,netherlands,31,alfa-romeo,Antonio Giovinazzi,Robert Kubica,14.0,15.0
+2021,emilia-romagna,41,alpine,Esteban Ocon,Fernando Alonso,9.0,10.0
+2021,emilia-romagna,17,mclaren,Lando Norris,Daniel Ricciardo,3.0,6.0
+2021,france,33,mclaren,Lando Norris,Daniel Ricciardo,5.0,6.0
+2021,france,13,williams,George Russell,Nicholas Latifi,12.0,18.0
+2021,hungary,49,alphatauri,Pierre Gasly,Yuki Tsunoda,5.0,6.0
+2021,italy,49,alfa-romeo,Antonio Giovinazzi,Robert Kubica,13.0,14.0
+2021,mexico,57,ferrari,Carlos Sainz Jr.,Charles Leclerc,6.0,5.0
+2021,mexico,69,ferrari,Charles Leclerc,Carlos Sainz Jr.,5.0,6.0
+2021,monaco,28,haas,Nikita Mazepin,Mick Schumacher,17.0,18.0
+2021,portugal,59,aston-martin,Lance Stroll,Sebastian Vettel,14.0,13.0
+2021,portugal,65,aston-martin,Sebastian Vettel,Lance Stroll,13.0,14.0
+2021,portugal,37,ferrari,Charles Leclerc,Carlos Sainz Jr.,6.0,11.0
+2021,portugal,7,haas,Nikita Mazepin,Mick Schumacher,19.0,17.0
+2021,portugal,8,haas,Mick Schumacher,Nikita Mazepin,17.0,19.0
+2021,portugal,20,mercedes,Lewis Hamilton,Valtteri Bottas,1.0,3.0
+2021,portugal,36,williams,George Russell,Nicholas Latifi,16.0,18.0
+2021,russia,24,alfa-romeo,Kimi Räikkönen,Antonio Giovinazzi,8.0,16.0
+2021,saudi-arabia,49,ferrari,Charles Leclerc,Carlos Sainz Jr.,7.0,8.0
+2021,styria,57,alfa-romeo,Kimi Räikkönen,Antonio Giovinazzi,11.0,15.0
+2021,styria,41,haas,Mick Schumacher,Nikita Mazepin,16.0,18.0
+2021,sao-paulo,52,alpine,Fernando Alonso,Esteban Ocon,9.0,8.0
+2021,sao-paulo,70,alpine,Esteban Ocon,Fernando Alonso,8.0,9.0
+2021,sao-paulo,5,mercedes,Lewis Hamilton,Valtteri Bottas,1.0,3.0
+2021,united-states,19,alfa-romeo,Kimi Räikkönen,Antonio Giovinazzi,13.0,11.0
+2022,abu-dhabi,26,alfa-romeo,Guanyu Zhou,Valtteri Bottas,12.0,15.0
+2022,abu-dhabi,43,alphatauri,Yuki Tsunoda,Pierre Gasly,11.0,14.0
+2022,abu-dhabi,48,aston-martin,Lance Stroll,Sebastian Vettel,8.0,10.0
+2022,abu-dhabi,9,mercedes,George Russell,Lewis Hamilton,5.0,18.0
+2022,australia,56,haas,Mick Schumacher,Kevin Magnussen,13.0,14.0
+2022,austria,21,alpine,Esteban Ocon,Fernando Alonso,5.0,10.0
+2022,austria,52,alpine,Esteban Ocon,Fernando Alonso,5.0,10.0
+2022,austria,32,haas,Mick Schumacher,Kevin Magnussen,6.0,8.0
+2022,austria,5,mclaren,Lando Norris,Daniel Ricciardo,7.0,9.0
+2022,azerbaijan,15,alfa-romeo,Guanyu Zhou,Valtteri Bottas,,11.0
+2022,azerbaijan,27,alpine,Fernando Alonso,Esteban Ocon,7.0,10.0
+2022,bahrain,8,alpine,Esteban Ocon,Fernando Alonso,7.0,9.0
+2022,bahrain,38,alpine,Esteban Ocon,Fernando Alonso,7.0,9.0
+2022,bahrain,9,aston-martin,Lance Stroll,Nico Hülkenberg,12.0,17.0
+2022,belgium,12,red-bull,Max Verstappen,Sergio Pérez,1.0,2.0
+2022,great-britain,31,ferrari,Charles Leclerc,Carlos Sainz Jr.,4.0,1.0
+2022,great-britain,43,ferrari,Carlos Sainz Jr.,Charles Leclerc,1.0,4.0
+2022,great-britain,15,haas,Mick Schumacher,Kevin Magnussen,8.0,10.0
+2022,canada,60,aston-martin,Lance Stroll,Sebastian Vettel,10.0,12.0
+2022,netherlands,64,mercedes,George Russell,Lewis Hamilton,2.0,4.0
+2022,hungary,26,alphatauri,Pierre Gasly,Yuki Tsunoda,12.0,19.0
+2022,hungary,65,aston-martin,Sebastian Vettel,Lance Stroll,10.0,11.0
+2022,hungary,65,mercedes,Lewis Hamilton,George Russell,2.0,3.0
+2022,italy,16,haas,Mick Schumacher,Kevin Magnussen,12.0,16.0
+2022,mexico,55,mclaren,Daniel Ricciardo,Lando Norris,7.0,9.0
+2022,miami,34,haas,Mick Schumacher,Kevin Magnussen,15.0,16.0
+2022,miami,50,mercedes,George Russell,Lewis Hamilton,5.0,6.0
+2022,miami,20,williams,Alexander Albon,Nicholas Latifi,9.0,14.0
+2022,saudi-arabia,7,alpine,Fernando Alonso,Esteban Ocon,,6.0
+2022,spain,11,red-bull,Max Verstappen,Sergio Pérez,1.0,2.0
+2022,spain,49,red-bull,Max Verstappen,Sergio Pérez,1.0,2.0
+2022,spain,21,williams,Nicholas Latifi,Alexander Albon,16.0,18.0
+2022,sao-paulo,60,alpine,Fernando Alonso,Esteban Ocon,5.0,8.0
+2022,sao-paulo,65,aston-martin,Lance Stroll,Sebastian Vettel,10.0,11.0
+2022,sao-paulo,67,red-bull,Max Verstappen,Sergio Pérez,6.0,7.0
+2022,united-states,40,alpine,Fernando Alonso,Esteban Ocon,7.0,11.0
+2023,abu-dhabi,43,alfa-romeo,Guanyu Zhou,Valtteri Bottas,17.0,19.0
+2023,abu-dhabi,26,alphatauri,Yuki Tsunoda,Daniel Ricciardo,8.0,11.0
+2023,abu-dhabi,21,ferrari,Charles Leclerc,Carlos Sainz Jr.,2.0,18.0
+2023,abu-dhabi,17,haas,Nico Hülkenberg,Kevin Magnussen,15.0,20.0
+2023,azerbaijan,15,mercedes,Lewis Hamilton,George Russell,6.0,8.0
+2023,belgium,29,alpine,Esteban Ocon,Pierre Gasly,8.0,11.0
+2023,belgium,16,aston-martin,Fernando Alonso,Lance Stroll,5.0,9.0
+2023,canada,17,mclaren,Lando Norris,Oscar Piastri,13.0,11.0
+2023,netherlands,56,haas,Nico Hülkenberg,Kevin Magnussen,12.0,16.0
+2023,hungary,29,aston-martin,Fernando Alonso,Lance Stroll,9.0,10.0
+2023,hungary,25,mercedes,Lewis Hamilton,George Russell,4.0,6.0
+2023,japan,46,alpine,Pierre Gasly,Esteban Ocon,10.0,9.0
+2023,japan,53,alpine,Esteban Ocon,Pierre Gasly,9.0,10.0
+2023,japan,26,haas,Nico Hülkenberg,Kevin Magnussen,14.0,15.0
+2023,japan,27,mclaren,Lando Norris,Oscar Piastri,2.0,3.0
+2023,japan,5,mercedes,George Russell,Lewis Hamilton,7.0,5.0
+2023,japan,6,mercedes,Lewis Hamilton,George Russell,5.0,7.0
+2023,japan,49,mercedes,Lewis Hamilton,George Russell,5.0,7.0
+2023,las-vegas,34,alpine,Esteban Ocon,Pierre Gasly,4.0,11.0
+2023,las-vegas,36,red-bull,Max Verstappen,Sergio Pérez,1.0,3.0
+2023,mexico,11,aston-martin,Lance Stroll,Fernando Alonso,17.0,
+2023,mexico,56,mclaren,Lando Norris,Oscar Piastri,5.0,8.0
+2023,miami,13,mclaren,Lando Norris,Oscar Piastri,17.0,19.0
+2023,miami,32,mercedes,George Russell,Lewis Hamilton,4.0,6.0
+2023,qatar,19,aston-martin,Fernando Alonso,Lance Stroll,6.0,11.0
+2023,saudi-arabia,6,haas,Nico Hülkenberg,Kevin Magnussen,12.0,10.0
+2023,saudi-arabia,25,mclaren,Lando Norris,Oscar Piastri,17.0,15.0
+2023,saudi-arabia,44,mclaren,Oscar Piastri,Lando Norris,15.0,17.0
+2023,saudi-arabia,45,mclaren,Lando Norris,Oscar Piastri,17.0,15.0
+2023,saudi-arabia,48,mclaren,Oscar Piastri,Lando Norris,15.0,17.0
+2023,united-states,50,ferrari,Carlos Sainz Jr.,Charles Leclerc,3.0,
+2023,united-states,24,haas,Nico Hülkenberg,Kevin Magnussen,11.0,14.0
+2024,australia,23,haas,Nico Hülkenberg,Kevin Magnussen,9.0,10.0
+2024,australia,29,mclaren,Lando Norris,Oscar Piastri,3.0,4.0
+2024,austria,40,alpine,Pierre Gasly,Esteban Ocon,10.0,12.0
+2024,austria,26,kick-sauber,Valtteri Bottas,Guanyu Zhou,16.0,17.0
+2024,azerbaijan,10,haas,Nico Hülkenberg,Oliver Bearman,11.0,10.0
+2024,azerbaijan,46,kick-sauber,Guanyu Zhou,Valtteri Bottas,14.0,16.0
+2024,bahrain,48,aston-martin,Fernando Alonso,Lance Stroll,9.0,10.0
+2024,bahrain,52,rb,Daniel Ricciardo,Yuki Tsunoda,13.0,14.0
+2024,great-britain,20,aston-martin,Fernando Alonso,Lance Stroll,8.0,7.0
+2024,great-britain,10,kick-sauber,Valtteri Bottas,Guanyu Zhou,15.0,18.0
+2024,great-britain,18,mercedes,Lewis Hamilton,George Russell,1.0,
+2024,canada,69,alpine,Pierre Gasly,Esteban Ocon,9.0,10.0
+2024,canada,63,mercedes,Lewis Hamilton,George Russell,4.0,3.0
+2024,canada,68,mercedes,George Russell,Lewis Hamilton,3.0,4.0
+2024,china,19,rb,Daniel Ricciardo,Yuki Tsunoda,,
+2024,netherlands,32,haas,Nico Hülkenberg,Kevin Magnussen,11.0,18.0
+2024,emilia-romagna,60,kick-sauber,Guanyu Zhou,Valtteri Bottas,15.0,18.0
+2024,hungary,65,aston-martin,Lance Stroll,Fernando Alonso,10.0,11.0
+2024,hungary,68,mclaren,Oscar Piastri,Lando Norris,1.0,2.0
+2024,italy,47,kick-sauber,Valtteri Bottas,Guanyu Zhou,16.0,18.0
+2024,japan,46,ferrari,Carlos Sainz Jr.,Charles Leclerc,3.0,4.0
+2024,japan,48,haas,Nico Hülkenberg,Kevin Magnussen,11.0,13.0
+2024,japan,13,mercedes,George Russell,Lewis Hamilton,7.0,9.0
+2024,las-vegas,7,ferrari,Carlos Sainz Jr.,Charles Leclerc,3.0,4.0
+2024,las-vegas,34,rb,Yuki Tsunoda,Liam Lawson,9.0,16.0
+2024,las-vegas,15,red-bull,Max Verstappen,Sergio Pérez,5.0,10.0
+2024,mexico,37,alpine,Pierre Gasly,Esteban Ocon,10.0,13.0
+2024,mexico,15,mercedes,George Russell,Lewis Hamilton,5.0,4.0
+2024,mexico,66,mercedes,Lewis Hamilton,George Russell,4.0,5.0
+2024,monaco,50,kick-sauber,Valtteri Bottas,Guanyu Zhou,13.0,16.0
+2024,singapore,42,ferrari,Charles Leclerc,Carlos Sainz Jr.,5.0,7.0
+2024,singapore,6,kick-sauber,Guanyu Zhou,Valtteri Bottas,15.0,16.0
+2024,singapore,41,rb,Yuki Tsunoda,Daniel Ricciardo,12.0,18.0
+2024,spain,6,aston-martin,Lance Stroll,Fernando Alonso,14.0,12.0
+2024,spain,55,ferrari,Charles Leclerc,Carlos Sainz Jr.,5.0,6.0
+2024,spain,25,kick-sauber,Guanyu Zhou,Valtteri Bottas,13.0,16.0
+2024,spain,52,mercedes,Lewis Hamilton,George Russell,3.0,4.0
+2024,spain,22,rb,Daniel Ricciardo,Yuki Tsunoda,15.0,19.0
+2024,spain,6,williams,Alexander Albon,Logan Sargeant,18.0,20.0
+2024,spain,24,williams,Alexander Albon,Logan Sargeant,18.0,20.0
+2024,sao-paulo,46,mclaren,Lando Norris,Oscar Piastri,6.0,8.0
+2025,abu-dhabi,23,haas,Esteban Ocon,Oliver Bearman,7.0,12.0
+2025,abu-dhabi,24,kick-sauber,Gabriel Bortoleto,Nico Hülkenberg,11.0,9.0
+2025,abu-dhabi,58,kick-sauber,Nico Hülkenberg,Gabriel Bortoleto,9.0,11.0
+2025,abu-dhabi,20,mercedes,George Russell,Kimi Antonelli,5.0,15.0
+2025,australia,52,ferrari,Charles Leclerc,Lewis Hamilton,8.0,10.0
+2025,austria,28,kick-sauber,Gabriel Bortoleto,Nico Hülkenberg,8.0,9.0
+2025,azerbaijan,48,alpine,Pierre Gasly,Franco Colapinto,18.0,19.0
+2025,azerbaijan,43,ferrari,Lewis Hamilton,Charles Leclerc,8.0,9.0
+2025,azerbaijan,41,haas,Oliver Bearman,Esteban Ocon,12.0,14.0
+2025,belgium,20,kick-sauber,Gabriel Bortoleto,Nico Hülkenberg,9.0,12.0
+2025,belgium,5,mclaren,Oscar Piastri,Lando Norris,1.0,2.0
+2025,great-britain,30,haas,Oliver Bearman,Esteban Ocon,11.0,13.0
+2025,canada,35,alpine,Franco Colapinto,Pierre Gasly,13.0,15.0
+2025,canada,21,aston-martin,Fernando Alonso,Lance Stroll,7.0,17.0
+2025,canada,13,haas,Esteban Ocon,Oliver Bearman,9.0,11.0
+2025,canada,37,kick-sauber,Nico Hülkenberg,Gabriel Bortoleto,8.0,14.0
+2025,china,21,ferrari,Charles Leclerc,Lewis Hamilton,,
+2025,china,45,kick-sauber,Gabriel Bortoleto,Nico Hülkenberg,14.0,15.0
+2025,netherlands,5,alpine,Franco Colapinto,Pierre Gasly,11.0,17.0
+2025,netherlands,16,alpine,Pierre Gasly,Franco Colapinto,17.0,11.0
+2025,netherlands,62,aston-martin,Lance Stroll,Fernando Alonso,7.0,8.0
+2025,netherlands,41,mercedes,Kimi Antonelli,George Russell,16.0,4.0
+2025,emilia-romagna,43,alpine,Pierre Gasly,Franco Colapinto,13.0,16.0
+2025,emilia-romagna,61,ferrari,Lewis Hamilton,Charles Leclerc,4.0,6.0
+2025,emilia-romagna,58,mclaren,Lando Norris,Oscar Piastri,2.0,3.0
+2025,hungary,5,alpine,Pierre Gasly,Franco Colapinto,19.0,18.0
+2025,hungary,59,williams,Carlos Sainz Jr.,Alexander Albon,14.0,15.0
+2025,italy,30,alpine,Pierre Gasly,Franco Colapinto,16.0,17.0
+2025,italy,25,williams,Alexander Albon,Carlos Sainz Jr.,7.0,11.0
+2025,japan,33,alpine,Pierre Gasly,Jack Doohan,13.0,15.0
+2025,japan,31,racing-bulls,Isack Hadjar,Liam Lawson,8.0,17.0
+2025,las-vegas,33,haas,Esteban Ocon,Oliver Bearman,9.0,10.0
+2025,mexico,41,mercedes,George Russell,Kimi Antonelli,7.0,6.0
+2025,mexico,62,mercedes,Kimi Antonelli,George Russell,6.0,7.0
+2025,mexico,29,williams,Carlos Sainz Jr.,Alexander Albon,17.0,12.0
+2025,mexico,51,williams,Carlos Sainz Jr.,Alexander Albon,17.0,12.0
+2025,miami,38,ferrari,Lewis Hamilton,Charles Leclerc,8.0,7.0
+2025,miami,52,ferrari,Charles Leclerc,Lewis Hamilton,7.0,8.0
+2025,miami,5,williams,Carlos Sainz Jr.,Alexander Albon,9.0,5.0
+2025,miami,14,williams,Alexander Albon,Carlos Sainz Jr.,5.0,9.0
+2025,monaco,64,williams,Alexander Albon,Carlos Sainz Jr.,9.0,10.0
+2025,saudi-arabia,40,haas,Oliver Bearman,Esteban Ocon,13.0,14.0
+2025,saudi-arabia,42,kick-sauber,Nico Hülkenberg,Gabriel Bortoleto,15.0,18.0
+2025,singapore,56,ferrari,Lewis Hamilton,Charles Leclerc,8.0,6.0
+2025,singapore,61,ferrari,Charles Leclerc,Lewis Hamilton,6.0,8.0
+2025,spain,10,ferrari,Charles Leclerc,Lewis Hamilton,3.0,6.0
+2025,spain,63,haas,Oliver Bearman,Esteban Ocon,17.0,16.0
+2025,sao-paulo,15,red-bull,Max Verstappen,Yuki Tsunoda,3.0,17.0
+2025,united-states,54,alpine,Franco Colapinto,Pierre Gasly,17.0,19.0
+2026,australia,16,williams,Carlos Sainz Jr.,Alexander Albon,15.0,12.0
+2026,australia,29,williams,Alexander Albon,Carlos Sainz Jr.,12.0,15.0
+2026,austria,37,aston-martin,Lance Stroll,Fernando Alonso,,18.0
+2026,azerbaijan,27,audi,Gabriel Bortoleto,Nico Hülkenberg,15.0,11.0
+2026,azerbaijan,7,red-bull,Max Verstappen,Isack Hadjar,2.0,3.0
+2026,bahrain,35,aston-martin,Fernando Alonso,Lance Stroll,8.0,12.0
+2026,bahrain,21,mercedes,Kimi Antonelli,George Russell,2.0,20.0
+2026,barcelona-catalunya,19,alpine,Pierre Gasly,Franco Colapinto,7.0,10.0
+2026,barcelona-catalunya,32,ferrari,Lewis Hamilton,Charles Leclerc,1.0,15.0
+2026,barcelona-catalunya,30,haas,Oliver Bearman,Esteban Ocon,17.0,13.0
+2026,barcelona-catalunya,61,mercedes,Kimi Antonelli,George Russell,16.0,2.0
+2026,belgium,12,alpine,Pierre Gasly,Franco Colapinto,11.0,10.0
+2026,belgium,5,aston-martin,Lance Stroll,Fernando Alonso,,19.0
+2026,belgium,9,aston-martin,Fernando Alonso,Lance Stroll,19.0,
+2026,great-britain,34,haas,Oliver Bearman,Esteban Ocon,12.0,13.0
+2026,canada,6,mercedes,George Russell,Kimi Antonelli,,1.0
+2026,canada,22,mercedes,Kimi Antonelli,George Russell,1.0,
+2026,canada,25,mercedes,George Russell,Kimi Antonelli,,1.0
+2026,china,24,ferrari,Charles Leclerc,Lewis Hamilton,4.0,3.0
+2026,china,26,ferrari,Lewis Hamilton,Charles Leclerc,3.0,4.0
+2026,china,35,ferrari,Lewis Hamilton,Charles Leclerc,3.0,4.0
+2026,china,39,ferrari,Charles Leclerc,Lewis Hamilton,4.0,3.0
+2026,china,40,ferrari,Lewis Hamilton,Charles Leclerc,3.0,4.0
+2026,china,19,haas,Oliver Bearman,Esteban Ocon,5.0,14.0
+2026,china,21,racing-bulls,Liam Lawson,Arvid Lindblad,7.0,12.0
+2026,netherlands,66,mercedes,Kimi Antonelli,George Russell,2.0,3.0
+2026,netherlands,59,williams,Alexander Albon,Carlos Sainz Jr.,17.0,16.0
+2026,hungary,62,racing-bulls,Liam Lawson,Arvid Lindblad,8.0,10.0
+2026,italy,7,aston-martin,Fernando Alonso,Lance Stroll,,
+2026,italy,48,mclaren,Lando Norris,Oscar Piastri,4.0,5.0
+2026,italy,49,mclaren,Oscar Piastri,Lando Norris,5.0,4.0
+2026,italy,53,mclaren,Lando Norris,Oscar Piastri,4.0,5.0
+2026,italy,18,mercedes,Kimi Antonelli,George Russell,1.0,2.0
+2026,italy,23,mercedes,George Russell,Kimi Antonelli,2.0,1.0
+2026,italy,50,mercedes,Kimi Antonelli,George Russell,1.0,2.0
+2026,japan,8,aston-martin,Lance Stroll,Fernando Alonso,,18.0
+2026,japan,38,audi,Nico Hülkenberg,Gabriel Bortoleto,11.0,13.0
+2026,japan,42,ferrari,Charles Leclerc,Lewis Hamilton,3.0,6.0
+2026,mexico,38,alpine,Franco Colapinto,Pierre Gasly,15.0,17.0
+2026,miami,15,williams,Carlos Sainz Jr.,Alexander Albon,9.0,10.0
+2026,monaco,56,williams,Alexander Albon,Carlos Sainz Jr.,8.0,16.0
+2026,singapore,46,ferrari,Charles Leclerc,Lewis Hamilton,2.0,6.0
+2026,united-states,11,haas,Esteban Ocon,Oliver Bearman,14.0,
+2026,united-states,8,mclaren,Lando Norris,Oscar Piastri,5.0,7.0
+2026,united-states,23,red-bull,Max Verstappen,Isack Hadjar,3.0,6.0

@@ -1,0 +1,149 @@
+{
+ "status": "Finished. All three improvements are done. Peak, from 1950: the top tier is Fangio, Senna, Clark, Schumacher and Stewart, and the model can't separate them. The second tier is Graham Hill, Verstappen, Lauda, Rindt, Alonso, Mansell, Piquet and Ascari. Combined 50/50, from 1970: Schumacher is alone in tier 1 (70% chance of being first). Tier 2 is Verstappen, Alonso, Senna and Hamilton. On career, Schumacher, Alonso, Verstappen and Hamilton share tier 1. None of the stronger-car versions improved prediction, so the main model is unchanged. Removing a single teammate usually moves a driver less than 0.2 places, but drivers alone in a strong car move more: Hamilton without Rosberg, Mansell without Patrese and Hill without Ginther. From 2018 the results-only model agrees with a lap-time model at 0.9 on season scores and on the order of the peak ranking.",
+ "note_peak": "Some placings deserve suspicion before anyone reads them as findings. Frentzen and Kubica rank high, while Hamilton's peak is 2010–12 rather than a title run. In this 1970+ view Stewart's peak uses only his last three seasons, moves by about 0.6 depending on the warm-up, and leaves the top five with no warm-up at all. The all-time section below covers his earlier years. Each could be real or could come from who their teammates were. The 2018+ models also use different years and evidence, so their scores aren't directly comparable with the 1970+ ones.",
+ "note_adapt": "Treat this as weak evidence. In tests with known answers, the 1970+ model only partly recovers the true order (0.56 for teams and 0.41 for rules on the final version). The convergence check is also weakest for the spread of the rules effect (R-hat 1.03). Schumacher's comeback seasons score far below his peak, but the model can't fully separate age, three years out and the 2010 car rules. So this doesn't prove he adapted badly, as you pointed out.",
+ "wet_text": "Using your rule, a race counts as wet if at least 50% was run on inters or wets, changeable at 20–50%, and dry below that. From 2018 this uses real tyre data, giving 9 wet and 7 changeable races. For 1971–2017 there's no tyre data, so I estimated 116 races from reports, giving 44 wet and 35 changeable. On six 2018+ races that estimate was within 7 points of the truth. In the final known-answer test the 1970+ model recovers wet race pace at 0.42, wet qualifying at 0.30 and changeable pace at 0.33. So these scores show direction but shouldn't be used to separate individual drivers.",
+ "note_2012": "Alonso's gain is the largest in this group, in a car ranked only 3rd. But his range overlaps Hamilton's and Vettel's, and a large part of the evidence is one teammate, Massa, whose own level is an estimate. It supports your view of that season without proving it. Vettel's gain is also limited by the ceiling, since he had the best car.",
+ "changes": [
+  [
+   "Adaptability, first 2018+, then 1980+",
+   "Each driver gets their own penalty after changing team or rules, fading over about 6 races, measured against the typical driver."
+  ],
+  [
+   "Wet pace, using tyres used",
+   "50%+ on wet tyres is wet, 20–50% is changeable with its own score, the rest is dry. Tyre data from 2018, checked race reports before."
+  ],
+  [
+   "Include pre-1980 seasons",
+   "Scores now start in 1970, with 1966–69 as an unreported warm-up. Privateers before 1983 are separated from works teams, and a team that bought a chassis stays linked to its own later cars."
+  ],
+  [
+   "Driver improvement",
+   "Each driver's level can change season to season. Gaps of 2+ years allow a bigger change, which covers Schumacher's comeback."
+  ],
+  [
+   "Team orders",
+   "A written list of 16 cases: clear swaps reversed, drivers told to hold position marked, and Pérez-style cases left out. The radio data has no transcripts."
+  ],
+  [
+   "Sprints",
+   "Included as separate results, and tested by removing them."
+  ],
+  [
+   "Peak and career scores",
+   "Calculated and shown separately."
+  ],
+  [
+   "Drivers without the best car",
+   "Each car is ranked each season, and each driver gets a gain over an average driver in the same seat."
+  ],
+  [
+   "Testing",
+   "Held-out rounds, known-answer simulations, changed assumptions, and the constructors' table as an outside check."
+  ],
+  [
+   "Driver-team fit and combined score",
+   "Fit stays out of the scores, as you decided. Peak and career stay separate, plus a combined ranking at 50/50 for now."
+  ]
+ ],
+ "decisions": [
+  [
+   "Decided: qualifying times and race margins stay out",
+   "You agreed to keep both out of the main model. Both stay as assumption tests, and Schumacher's drop from 2nd to 5th with qualifying times is shown above."
+  ],
+  [
+   "Open: how to weight peak against career",
+   "The combined ranking uses 50/50 for now. 75% and 25% peak are shown alongside it."
+  ]
+ ],
+ "improve": [
+  [
+   "Done: 50/50 balance",
+   "This is the main combined ranking for now. 75% and 25% peak stay in the table for comparison."
+  ],
+  [
+   "Done: early 1970s",
+   "Customer teams were relinked, and warm-ups from 1966 and 1961 were tested. Neither clearly helped: 1970–75 stays at 0.61 and 1971 fell to 0.23, so those years keep the warning."
+  ],
+  [
+   "Done: 1966–68 wet races",
+   "All seven were checked against race reports, and Britain 1966 became dry. The site lists none for 1969."
+  ],
+  [
+   "Done: merged wet score",
+   "Tested again on the final version. It moved little, so wet and changeable stay separate."
+  ],
+  [
+   "Done: assumption tests on the final model",
+   "The order holds at 0.975 or above across six changes, but three of them put Senna first on peak, one puts Alonso first on career, and no warm-up removes Stewart from the peak top five."
+  ],
+  [
+   "Done: collision tendency",
+   "Fitted separately, with a spread of .12 logits and R-hat 1.003. It recovered only .33–.46 on known answers and changed almost nothing, apart from Prost and Mansell swapping on 50/50."
+  ],
+  [
+   "Done: long laps run",
+   "25,000 steps per chain, 20,000 kept. Worst R-hat fell from 1.023 to 1.0003 and lowest effective samples rose from 91 to about 6,600. Peak scores moved 0.10 on average (0.25 at most), and the 2018+ order held at .99. Its held-out and known-answer tests still use the shorter fits from 4 Nov."
+  ],
+  [
+   "Done: collisions decided",
+   "Kept out of the scores and reported as uncertainty, as you agreed. Counting them all as driver errors stays in the assumption tests."
+  ],
+  [
+   "Done: back to the 1950s",
+   "Fitted and tested. Usable with warnings: all-time peak goes from 1950, while career and combined stay from 1970."
+  ],
+  [
+   "Later: combining Models A and B",
+   "Only if tests support it."
+  ],
+  [
+   "Done: dominant car test",
+   "Adding pace to 21 dominant seasons in fake data, the car ratings took about 69–77% of it and the rest stayed with the driver. Senna's peak flattered by .11–.21, Fangio by .09–.11, Hamilton by .05–.12, Schumacher by .02. Clark moved the other way, unexplained. It tests added pace only, so it doesn't prove low ratings for cars like the 1962 Lotus are right."
+  ],
+  [
+   "Rejected: customer–works car link",
+   "No gain on unseen races (.3488 to .3489 in qualifying, .3578 to .3580 in races), and customer teams got no better. The constructors' check stayed at .862. Left out."
+  ],
+  [
+   "Rejected: laps before retiring",
+   "Without running position, this mostly shows when the car failed. Not used."
+  ],
+  [
+   "Rejected: age curve",
+   "No gain on unseen races (.3684 to .3683 in races, .3584 to .3582 in qualifying). The season-to-season form already covers it. Its implied peak of about 31.7 could come from weaker drivers leaving early."
+  ],
+  [
+   "Done: peak window test",
+   "Each extra season a driver has adds a flattery of about .014–.034, up to about .2–.4 for the longest careers. Order with best 3 vs best 5 or 7 seasons: .991 and .972, though Clark goes from 4.52 to 5.55 at 7."
+  ],
+  [
+   "Done: qualifying times rerun",
+   "See the section above. It's a small gain in one place, and the headline move is Schumacher from 2nd to 5th on peak."
+  ],
+  [
+   "Decided: race margins and qualifying times",
+   "Kept out of the main model, as you agreed, and kept as assumption tests."
+  ],
+  [
+   "Done: heavy-tailed cars",
+   "Letting a few cars sit far from the rest changed almost nothing (peak order .996), and the data barely pinned down how heavy the tails should be. Forcing very heavy tails was slightly worse. Not adopted."
+  ],
+  [
+   "Done: car carry-over",
+   "Forcing weaker year-to-year carry-over made prediction and the car check worse, so it isn't adopted. It moves the rankings more than anything else tested, especially Hamilton and Lauda, so it's kept as an assumption test and widens the tiers."
+  ],
+  [
+   "Done: driver form",
+   "Halving how much a driver can change between seasons made qualifying prediction slightly worse and races no better. Not adopted."
+  ],
+  [
+   "Done: remove-a-teammate reruns",
+   "15 refits. 11 of the 15 leading drivers moved by .21 or less. Prost depends heavily on Senna, and Hamilton, Mansell and Hill look better once their teammate in a strong car is removed."
+  ],
+  [
+   "Done: lap-time check",
+   "On 2018+ data the car ratings match lap pace at .95 and teammate gaps at about .8. Drivers in slow cars are where finishing positions say least."
+  ]
+ ]
+}

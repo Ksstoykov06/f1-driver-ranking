@@ -1,0 +1,7 @@
+change,model,peak_corr,career_corr,peak_top5,career_top5
+Team orders not corrected,B80,0.9912663182523892,0.9833772805309808,"Michael Schumacher, Ayrton Senna, Jackie Stewart, Max Verstappen, Niki Lauda","Michael Schumacher, Fernando Alonso, Max Verstappen, Lewis Hamilton, Ayrton Senna"
+"Adaptation lasts about 12 races, not 6",B80,0.9833854496949554,0.96890017003869,"Ayrton Senna, Michael Schumacher, Jackie Stewart, Max Verstappen, Niki Lauda","Fernando Alonso, Michael Schumacher, Max Verstappen, Lewis Hamilton, Ayrton Senna"
+Collisions count as driver errors,B80,0.9839933524305178,0.9770291694390368,"Ayrton Senna, Michael Schumacher, Jackie Stewart, Niki Lauda, Max Verstappen","Fernando Alonso, Michael Schumacher, Max Verstappen, Lewis Hamilton, Ayrton Senna"
+Customer teams not separated,B80,0.9738426887669198,0.9542127701520492,"Ayrton Senna, Michael Schumacher, Jackie Stewart, Niki Lauda, Max Verstappen","Michael Schumacher, Lewis Hamilton, Fernando Alonso, Max Verstappen, Ayrton Senna"
+No warm-up seasons before 1970,B80,0.9862456539327811,0.9825131225510733,"Michael Schumacher, Ayrton Senna, Max Verstappen, Niki Lauda, Fernando Alonso","Michael Schumacher, Fernando Alonso, Max Verstappen, Lewis Hamilton, Ayrton Senna"
+Wet and changeable merged,B80,0.9914325074894494,0.9829139867090532,"Ayrton Senna, Michael Schumacher, Jackie Stewart, Max Verstappen, Niki Lauda","Fernando Alonso, Michael Schumacher, Max Verstappen, Lewis Hamilton, Ayrton Senna"

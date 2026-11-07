@@ -1,0 +1,222 @@
+<title>F1 Driver Model Pilot</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a single reading column; each chart sits with the sentence that explains it, like an engineer's debrief. */
+:root{--bg:#f6f7f8;--panel:#ffffff;--fg:#14171a;--fg2:#4d5560;--fg3:#7b8490;--rule:#dde1e6;--grid:#e8ebee;--a:#2a78d6;--b:#eb6834;--c3:#1baf7a;--c4:#eda100;--c5:#e87ba4;--warnbg:#fff4df;--warnfg:#6d4a00;
+--display:"Barlow Condensed","Arial Narrow",sans-serif;--body:"Source Sans 3","Segoe UI",sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121518;--panel:#1a1e22;--fg:#eef0f2;--fg2:#b6bdc6;--fg3:#868f9a;--rule:#2c3238;--grid:#262b31;--a:#3987e5;--b:#d95926;--c3:#199e70;--c4:#c98500;--c5:#d55181;--warnbg:#33290f;--warnfg:#f0d595;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121518;--panel:#1a1e22;--fg:#eef0f2;--fg2:#b6bdc6;--fg3:#868f9a;--rule:#2c3238;--grid:#262b31;--a:#3987e5;--b:#d95926;--c3:#199e70;--c4:#c98500;--c5:#d55181;--warnbg:#33290f;--warnfg:#f0d595;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:400 17px/1.55 var(--body)}
+main{max-width:860px;margin:0 auto;padding-block:40px 80px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:44px}
+section{display:grid;gap:14px;min-width:0}
+h1{font:700 clamp(40px,8vw,64px)/1 var(--display);margin:0;letter-spacing:.005em;text-wrap:balance}
+h2{font:600 32px/1.1 var(--display);margin:0;text-wrap:balance}
+h3{font:600 21px/1.2 var(--display);margin:0}
+p{margin:0;max-width:68ch}
+.lede{font-size:20px;color:var(--fg2)}
+.fig{background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:16px;display:grid;gap:10px;min-width:0;align-content:start}
+.figt{font-weight:600}
+.figs{color:var(--fg2);font-size:15px}
+.chart{width:100%;min-width:0;position:relative}
+svg{display:block;width:100%;height:auto}
+svg text{font-family:var(--body);fill:var(--fg2);font-size:13px}
+svg .num{font-family:var(--mono);font-size:12px}
+svg .strong{fill:var(--fg);font-weight:600}
+.ctl{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+button.tg{font:600 14px var(--body);color:var(--fg2);background:transparent;border:1px solid var(--rule);border-radius:4px;padding:6px 11px;cursor:pointer}
+button.tg[aria-pressed=true]{color:var(--bg);background:var(--fg);border-color:var(--fg)}
+button.tg:focus-visible{outline:2px solid var(--a);outline-offset:2px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:14px;color:var(--fg2)}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.two>div{min-width:0}
+.side{background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:16px;display:grid;gap:10px;align-content:start;min-width:0}
+.side ol{margin:0;padding-left:20px;display:grid;gap:7px}
+.tag{font:600 13px var(--mono);letter-spacing:.04em}
+.tagA{color:var(--a)}.tagB{color:var(--b)}
+.note{background:var(--warnbg);color:var(--warnfg);border-radius:6px;padding:12px 14px;max-width:none}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:15px;font-variant-numeric:tabular-nums}
+th{text-align:left;font-weight:600;color:var(--fg2);border-bottom:1px solid var(--rule);padding:6px 10px 6px 0}
+td{border-bottom:1px solid var(--grid);padding:7px 10px 7px 0;vertical-align:top}
+td.n,th.n{text-align:right;font-family:var(--mono);font-size:13px}
+#tip{position:fixed;z-index:9;background:var(--fg);color:var(--bg);padding:6px 9px;border-radius:4px;font-size:13px;line-height:1.35;pointer-events:none;max-width:260px}
+.dec{display:grid;gap:12px}
+.dec>div{display:grid;gap:3px;border-top:1px solid var(--rule);padding-top:12px}
+.dec b{font-weight:600}
+details summary{cursor:pointer;color:var(--fg2);font-size:15px}
+</style>
+<main>
+<header style="display:grid;gap:14px">
+<h1>F1 Driver Model: 2018–2026 Pilot</h1>
+<p class="lede">Two separate models, one using every lap and one using only official results, both trying to work out how good each driver is once the car is taken away.</p>
+</header>
+
+<section>
+<h2>Where it stands</h2>
+<p><b>Both models put Verstappen first, and by a clear margin.</b> In identical cars, he averages about P<span id="vA"></span> in the lap model and P<span id="vB"></span> in the results model. The next driver is more than two places behind in both. Below him the models share 8 of their top 10, but the order is close enough that most neighbouring places can't be separated.</p>
+<p>The method works well enough to keep developing. Both models predict teammate battles better than simple benchmarks and give stable answers. <b>Adaptability, wet-weather skill and age are not yet working properly</b>, and those are the parts you most wanted, so they're the first things to decide on.</p>
+<p class="note">This ranks only what's visible since 2018, using 192 races. It says nothing about Senna, Schumacher or Alonso at his peak, and a driver's score covers only the seasons in this window. Treat it as a test of the method, not a verdict on the all-time question.</p>
+</section>
+
+<section>
+<h2>What each model does</h2>
+<p>Both models answer the same question and share the same core idea: performance is driver skill plus car strength, adjusted for wet conditions, age and how that particular season went. They differ in the evidence they use.</p>
+<div class="two">
+<div class="side"><span class="tag tagA">MODEL A · LAP DATA</span><h3>How fast was each lap?</h3>
+<ol><li>Keep only representative laps: push laps in qualifying, clean-air green-flag laps in the race.</li>
+<li>Remove fuel, tyres and track conditions, leaving one pace gap per driver per session.</li>
+<li>Split that gap into driver, car and season effects. Results are in percent of lap time.</li>
+<li>Measure racecraft: places gained or lost beyond what pace and grid predict.</li></ol></div>
+<div class="side"><span class="tag tagB">MODEL B · RESULTS ONLY</span><h3>Who finished ahead of whom?</h3>
+<ol><li>Take the qualifying order and finishing order from each weekend.</li>
+<li>Estimate who tends to beat whom, using rank-ordered logit (Plackett-Luce).</li>
+<li>Split that into driver, car and season effects, accounting for grid position and how hard each track is to pass on.</li>
+<li>This is the only version that can reach back to 1980, so comparing it with Model A shows what we lose without lap data.</li></ol></div>
+</div>
+<p>Both then share the last step. Mechanical retirements are left out, while solo crashes count against the driver. Each driver then goes through simulated weekends in <b>identical cars</b>, with some rain and a random car fit each time. Their score is their average finishing position in a 20-car field, which lets us compare models that work in different units.</p>
+</section>
+
+<section>
+<h2>Step 1: Choosing which laps count</h2>
+<p>This is your point about one hero lap flattering a driver. Model A averages all of a driver's push laps in the dry instead of taking only the fastest. Out-laps, in-laps, laps under yellow flags and deleted laps are dropped. Of about <span id="fq"></span> qualifying laps recorded, <span id="fqk"></span> count. In races, <span id="fr"></span> of <span id="frt"></span> do.</p>
+<div class="fig"><div class="figt">Verstappen and Leclerc, Bahrain 2024 qualifying</div><div class="figs">Each dot is a timed lap. Filled dots are the push laps the model keeps. Hover or tap for details.</div>
+<div class="legend"><span><i style="background:var(--a)"></i>Verstappen</span><span><i style="background:var(--b)"></i>Leclerc</span><span><i style="background:transparent;border:2px solid var(--fg3);box-sizing:border-box"></i>Discarded</span></div>
+<div class="chart" id="cEx"></div></div>
+<p>In a wet session this doesn't work, because a drying track makes later laps faster for everyone. So wet qualifying uses each driver's best lap in each segment instead.</p>
+</section>
+
+<section>
+<h2>Step 2: Separating the driver from the car</h2>
+<p>Teammates share a car, so the gap between them says something about the drivers. Those comparisons then link up: Gasly raced alongside both Verstappen and Tsunoda, so those three are linked, and links like that form a chain across the grid. Everything a team's drivers have in common becomes the car's strength for that season.</p>
+<div class="fig"><div class="figt">Estimated car strength by team</div><div class="figs">Model A, race pace compared with the average car in the whole 2018–2026 sample, in percent of lap time. Further right is faster.</div>
+<div class="ctl" id="carCtl"></div><div class="chart" id="cCar"></div></div>
+<p>The car estimate comes out of the model and isn't an input. Check whether these look right to you, because you may spot problems a statistic can't. Cars are compared across seasons only through the drivers who link them, so treat gaps between different years with more caution.</p>
+</section>
+
+<section>
+<h2>The rankings</h2>
+<p>Each bar is the 90% credible range for a driver's average finish in identical cars, and the dot is the central estimate. Bars that overlap heavily mean the order between those drivers isn't settled.</p>
+<div class="fig"><div class="ctl" id="rankCtl"></div><div class="chart" id="cRank"></div></div>
+<p>Thirty-one drivers with at least 40 starts are ranked. Newer drivers have wider bars because there's less evidence on them. That's why Hadjar in Model B and Antonelli in Model A can place fairly high without the model being sure about them.</p>
+</section>
+
+<section>
+<h2>Do the two models agree?</h2>
+<p>Mostly, with a rank correlation of <span id="agr"></span> on the final score. Drivers on the diagonal score the same in both, and those away from it are the interesting cases.</p>
+<div class="fig"><div class="figt">Lap model against results model</div><div class="figs">Average finish in identical cars. Up and to the right is better in both.</div><div class="chart" id="cAB"></div></div>
+<p>Some of the gaps are worth a look. Piastri is P<span id="piaA"></span> in Model A against P<span id="piaB"></span> in Model B, and Hamilton gains in the results model. A results-only model can credit things lap pace misses, such as strategy or team calls, but it can also mistake those things for driver skill.</p>
+</section>
+
+<section>
+<h2>One-lap pace versus race pace</h2>
+<p>This is your Trulli and Pérez point, and it's why these skills are measured separately. Anyone above the diagonal is stronger in races than qualifying, relative to the field. Pérez should sit above it if the model is picking up something real, and in Model A he does.</p>
+<div class="fig"><div class="ctl" id="pqCtl"></div><div class="chart" id="cPQ"></div><div class="figs">Driver skill coefficients, drawn on the same scale. Dry conditions only, and the car is removed.</div></div>
+</section>
+
+<section>
+<h2>Careers season by season</h2>
+<p>These lines use each driver's real age and that season's deviation, scored in the same all-time field. Peak is the best three consecutive seasons, and career value adds up places gained on an average driver, so it rewards longevity.</p>
+<div class="fig"><div class="ctl" id="seasonCtl"></div><div class="chart" id="cSeason"></div><div class="legend" id="seasonLeg"></div></div>
+<div class="fig"><div class="figt">Peak and career value</div><div class="tw" id="tPeak"></div></div>
+</section>
+
+<section>
+<h2>Where it isn't working yet</h2>
+<div class="two">
+<div class="fig"><div class="figt">Adaptability barely varies</div><div class="figs">How much each driver's level moves from season to season, Model A, with 90% ranges. A lower figure means steadier.</div><div class="chart" id="cAdapt"></div></div>
+<div class="fig"><div class="figt">Wet race skill is very uncertain</div><div class="figs">Adjustment in wet races, top 10 of Model B. Right of zero means better in the wet. Most ranges cross zero.</div><div class="chart" id="cWet"></div></div>
+</div>
+<p><b>Adaptability:</b> The ranges are far wider than the differences between drivers, so the data mostly falls back on a shared average. Your best-fit and poor-fit rankings therefore come out almost identical to the main score. As it stands, adaptability doesn't really influence the ranking, which isn't what we agreed. It also can't yet tell a bad car fit from a poor season.</p>
+<p><b>Wet weather:</b> With only <span id="wr"></span> wet races and <span id="wq"></span> wet qualifying sessions, there's too little evidence. Model B makes Hamilton look poor in the wet, which goes against his reputation, while Model A sees almost no effect at all. The wet label also relies on tyre choice, so short showers are missed.</p>
+<p><b>Age:</b> Teammates age together, so the data can't separate a steady age trend from driver and season effects. A prior holds that trend near zero, which means the age curve is mostly an assumption. The curvature estimates also differ between models.</p>
+</section>
+
+<section>
+<h2>How far to trust it</h2>
+<div class="fig"><div class="figt">Predicting teammate battles in <span id="hold">34</span> unseen races</div><div class="figs">Share of head-to-heads called correctly. These races were hidden during fitting, though the models had seen other races from the same seasons. With about 250–330 pairs, gaps of a few points could be chance.</div><div class="chart" id="cVal"></div><div class="legend"><span><i style="background:var(--a)"></i>Model A</span><span><i style="background:var(--b)"></i>Model B</span><span><i style="background:var(--fg3)"></i>Simple benchmark</span></div></div>
+<p>Both models beat the benchmarks on accuracy. Model A is also well calibrated in qualifying. Model B's probabilities in qualifying are overconfident: its log loss is <span id="llB"></span> against <span id="llH"></span> for the simple head-to-head, even though it picks more winners.</p>
+<div class="two">
+<div class="fig"><div class="figt">Known-answer test</div><div class="figs">I generated fake seasons with known driver skills and checked what each model recovered. "Order recovered" is a rank correlation, where 1.00 is perfect. The 90% ranges should contain the truth about 90% of the time.</div><div class="tw" id="tSyn"></div></div>
+<div class="fig"><div class="figt">Convergence</div><div class="figs">Whether separate fitting runs agree. R-hat should be close to 1.00.</div><div class="tw" id="tDiag"></div></div>
+</div>
+<div class="fig"><div class="figt">What happens if I change an assumption?</div><div class="figs">Correlation with the main ranking, where 1.00 means the order didn't change.</div><div class="tw" id="tSens"></div></div>
+<p id="sensText"></p>
+<p class="note"><b>Known gaps:</b> Team orders aren't modelled, so number-two drivers may be underrated. Bahrain 2018 has no lap data, and Spa 2021 is excluded from the race models. Sprints aren't used yet. Collisions don't count as anyone's fault in the main run. The wet labels come from lap data, so going back before 2018 will need a hand-built list.</p>
+</section>
+
+<section>
+<h2>What to decide next</h2>
+<div class="dec">
+<div><b>1. Rebuild adaptability (my top recommendation)</b><span>Stop trying to estimate it from season noise. Measure it directly: how a driver performs against a teammate in the first races after a team move or rule change, compared with later. This gives fewer data points but a clearer meaning, and we could then give it an explicit weight in the score.</span></div>
+<div><b>2. Hand-label wet sessions</b><span>Replace the tyre rule with a checked list of races and qualifying sessions. It's needed for 1980 onwards anyway. You'd also want to decide whether Donington-style mixed races count as wet.</span></div>
+<div><b>3. Add driver improvement</b><span>Let each driver's level drift smoothly over a career. This would separate a young Verstappen from a peak one, and could replace the weak age curve.</span></div>
+<div><b>4. Deal with team orders</b><span>Decide which seasons or races to flag, such as Bottas at Mercedes or Pérez at Red Bull. This is a judgement call and F1 knowledge matters here, so your input would help most.</span></div>
+<div><b>5. Add sprints, then test Model B as a stand-in for Model A</b><span>Sprints add data on the current grid. We'd then measure how closely Model B can match Model A using results alone, which tells us how far to trust it before 2018.</span></div>
+</div>
+<p>I'd do 1 and 2 before extending backwards, since neither adaptability nor wet skill would improve just by adding older seasons. Also worth deciding: which single headline score you want, because main, peak and career value favour different drivers.</p>
+</section>
+</main>
+<div id="tip" hidden></div>
+<script>
+const D=/*DATA*/;
+const $=s=>document.querySelector(s),css=v=>`var(--${v})`;
+const tip=$('#tip');
+function showTip(e,h){tip.innerHTML=h;tip.hidden=false;const w=tip.offsetWidth,x=Math.min(e.clientX+12,innerWidth-w-8);tip.style.left=Math.max(8,x)+'px';tip.style.top=(e.clientY+14)+'px'}
+document.addEventListener('scroll',()=>tip.hidden=true,{passive:true});
+function hover(el,h){el.addEventListener('pointermove',e=>showTip(e,h));el.addEventListener('pointerleave',()=>tip.hidden=true);el.addEventListener('pointerdown',e=>showTip(e,h))}
+const NS='http://www.w3.org/2000/svg';
+function S(tag,a={},p){const n=document.createElementNS(NS,tag);for(const k in a)n.setAttribute(k,a[k]);if(p)p.appendChild(n);return n}
+function T(p,x,y,s,a={}){const n=S('text',{x,y,...a},p);n.textContent=s;return n}
+function scale(d0,d1,r0,r1){return v=>r0+(v-d0)*(r1-r0)/(d1-d0)}
+function canvas(id,h){const c=$(id);c.innerHTML='';const w=Math.max(c.clientWidth,280);const s=S('svg',{viewBox:`0 0 ${w} ${h}`,height:h,role:'img'},c);return{s,w,h}}
+function toggles(id,opts,val,fn){const c=$(id);c.innerHTML='';opts.forEach(([v,l])=>{const b=document.createElement('button');b.className='tg';b.textContent=l;b.setAttribute('aria-pressed',v===val);b.onclick=()=>{val=v;[...c.children].forEach(x=>x.setAttribute('aria-pressed',x===b));fn(v)};c.appendChild(b)})}
+function xGrid(s,x,ticks,top,bot,fmt=v=>v){ticks.forEach(t=>{S('line',{x1:x(t),x2:x(t),y1:top,y2:bot,stroke:css('grid')},s);T(s,x(t),bot+16,fmt(t),{'text-anchor':'middle',class:'num'})})}
+const short=n=>{const p=n.split(' ');return p.slice(1).join(' ')||n};
+const color={A:'a',B:'b'};
+const R={A:D.rankA,B:D.rankB};
+// inline text
+const get=(k,n)=>R[k].find(r=>r.name===n);
+$('#vA').textContent=get('A','Max Verstappen').score.toFixed(1);$('#vB').textContent=get('B','Max Verstappen').score.toFixed(1);
+const fmtk=v=>(Math.round(v/1000)).toLocaleString('en-GB')+',000';
+$('#fq').textContent=fmtk(D.funnel.q_total);$('#fqk').textContent=fmtk(D.funnel.q_kept);$('#fr').textContent=fmtk(D.funnel.r_kept);$('#frt').textContent=fmtk(D.funnel.r_total);
+$('#piaA').textContent=get('A','Oscar Piastri').rank;$('#piaB').textContent=get('B','Oscar Piastri').rank;
+$('#wr').textContent=D.counts.wet_r;$('#wq').textContent=D.counts.wet_q;
+const v=(s,m)=>D.validation.find(r=>r.session===s&&r.model===m);
+$('#llB').textContent=v('qualifying','pipeline B').log_loss.toFixed(3);$('#llH').textContent=v('qualifying','season-to-date head-to-head').log_loss.toFixed(3);
+function spearman(a,b){const rk=x=>{const o=[...x.keys()].sort((i,j)=>x[i]-x[j]),r=[];o.forEach((i,p)=>r[i]=p);return r};const ra=rk(a),rb=rk(b),n=a.length;return 1-6*ra.reduce((t,_,i)=>t+(ra[i]-rb[i])**2,0)/(n*(n*n-1))}
+const pairs=R.A.map(r=>[r.score,get('B',r.name).score]);$('#agr').textContent=spearman(pairs.map(p=>p[0]),pairs.map(p=>p[1])).toFixed(2);
+function exChart(){const{s,w}=canvas('#cEx',280);const L=40,Rr=12,Tp=12,B=250;const e=D.example;const x=scale(Math.min(...e.map(r=>r.sesT))-60,Math.max(...e.map(r=>r.sesT))+60,L,w-Rr);const ys=e.map(r=>r.time);const y=scale(Math.floor(Math.min(...ys)),Math.ceil(Math.max(...ys)),B,Tp);
+for(let t=Math.ceil(Math.min(...ys)/10)*10;t<=Math.max(...ys);t+=10){S('line',{x1:L,x2:w-Rr,y1:y(t),y2:y(t),stroke:css('grid')},s);T(s,L-6,y(t)+4,t+'s',{'text-anchor':'end',class:'num'})}
+['Q1','Q2','Q3'].forEach(q=>{const r=e.filter(l=>l.qs===q);if(r.length){T(s,x((Math.min(...r.map(l=>l.sesT))+Math.max(...r.map(l=>l.sesT)))/2),B+20,q,{'text-anchor':'middle'})}});
+e.forEach(r=>{const col=r.code==='VER'?css('a'):css('b'),kept=r.cls==='push lap';const c=S('circle',{cx:x(r.sesT),cy:y(r.time),r:kept?6:5,fill:kept?col:'transparent',stroke:kept?css('panel'):css('fg3'),'stroke-width':kept?2:1.5},s);hover(c,`${r.code==='VER'?'Verstappen':'Leclerc'} · ${r.qs}<br>${r.time.toFixed(3)}s · ${r.cls}`)})}
+function carChart(season){const rows=D.carA.filter(r=>r.season===season).sort((a,b)=>b.r-a.r);const rh=28;const{s,w}=canvas('#cCar',rows.length*rh+34);const L=118,x=scale(-1.6,1.6,L,w-16);const bot=rows.length*rh+6;xGrid(s,x,w<500?[-1,0,1]:[-1.5,-1,-.5,0,.5,1,1.5],0,bot,v=>(v>0?'+':'')+v+'%');S('line',{x1:x(0),x2:x(0),y1:0,y2:bot,stroke:css('fg3')},s);
+rows.forEach((r,i)=>{const yy=i*rh+6;T(s,L-8,yy+14,r.team.replace(/-/g,' '),{'text-anchor':'end'});const x0=Math.min(x(0),x(r.r)),bw=Math.max(Math.abs(x(r.r)-x(0)),2);const b=S('rect',{x:x0,y:yy+3,width:bw,height:rh-10,rx:3,fill:css('a')},s);hover(b,`${r.team} ${r.season}<br>${r.r>0?'+':''}${r.r.toFixed(2)}% race pace`)})}
+function rankChart(k){const rows=R[k];const rh=24;const{s,w}=canvas('#cRank',rows.length*rh+46);const L=Math.min(150,Math.max(128,w*.36)),x=scale(2,15,L,w-14);const bot=rows.length*rh+8;xGrid(s,x,[3,5,7,9,11,13,15],6,bot,v=>'P'+v);T(s,w-14,bot+34,w<500?'average finish (left is better)':'average finish in identical cars (further left is better)',{'text-anchor':'end'});
+rows.forEach((r,i)=>{const yy=i*rh+18;T(s,L-8,yy+4,r.name,{'text-anchor':'end',class:i<5?'strong':''});S('line',{x1:x(r.score_lo),x2:x(r.score_hi),y1:yy,y2:yy,stroke:css(color[k]),'stroke-width':3,'stroke-linecap':'round',opacity:.45},s);const c=S('circle',{cx:x(r.score),cy:yy,r:5,fill:css(color[k]),stroke:css('panel'),'stroke-width':2},s);const hit=S('rect',{x:0,y:yy-rh/2,width:w,height:rh,fill:'transparent'},s);hover(hit,`#${r.rank} ${r.name} · ${r.races} starts<br>P${r.score.toFixed(1)} (range P${r.score_lo.toFixed(1)}–P${r.score_hi.toFixed(1)})<br>Chance of being best: ${(r.p_best*100).toFixed(0)}%`)})}
+function abChart(){const W=$('#cAB').clientWidth||600,h=Math.min(W,520);const{s,w}=canvas('#cAB',h);const L=44,B=h-40,x=scale(14,3,L,w-14),y=scale(14,3,B,10);[4,6,8,10,12,14].forEach(t=>{S('line',{x1:x(t),x2:x(t),y1:10,y2:B,stroke:css('grid')},s);S('line',{x1:L,x2:w-14,y1:y(t),y2:y(t),stroke:css('grid')},s);T(s,x(t),B+16,'P'+t,{'text-anchor':'middle',class:'num'});T(s,L-6,y(t)+4,'P'+t,{'text-anchor':'end',class:'num'})});S('line',{x1:x(14),y1:y(14),x2:x(3),y2:y(3),stroke:css('fg3'),'stroke-dasharray':'4 4'},s);T(s,(L+w-14)/2,h-6,'Model A: laps',{'text-anchor':'middle'});T(s,14,16,'Model B: results',{});
+const lab=['Max Verstappen','Lewis Hamilton','Charles Leclerc','Lando Norris','Oscar Piastri','Nicholas Latifi','Isack Hadjar','Fernando Alonso','Yuki Tsunoda','Pierre Gasly'];
+R.A.forEach(a=>{const b=get('B',a.name);const c=S('circle',{cx:x(a.score),cy:y(b.score),r:6,fill:css('a'),stroke:css('panel'),'stroke-width':2},s);hover(c,`${a.name}<br>Model A: P${a.score.toFixed(1)} · Model B: P${b.score.toFixed(1)}`);if(lab.includes(a.name)){const left=['Max Verstappen','Fernando Alonso','Lando Norris','Isack Hadjar','Oscar Piastri'].includes(a.name);T(s,x(a.score)+(left?-9:9),y(b.score)+(a.name==='Charles Leclerc'?15:4),short(a.name),left?{'text-anchor':'end'}:{})}})}
+function pqChart(k){const rows=R[k];const W=$('#cPQ').clientWidth||600,h=Math.min(W,480);const{s,w}=canvas('#cPQ',h);const all=rows.flatMap(r=>[r.skill_q,r.skill_r]);const mx=Math.max(...all)*1.12,mn=Math.min(...all)*1.12;const L=44,B=h-40,x=scale(mn,mx,L,w-14),y=scale(mn,mx,B,10);const st=mx-mn>1.5?.5:.2;for(let t=Math.ceil(mn/st)*st;t<=mx;t+=st){const lab=(+t.toFixed(1)).toString();S('line',{x1:x(t),x2:x(t),y1:10,y2:B,stroke:css('grid')},s);S('line',{x1:L,x2:w-14,y1:y(t),y2:y(t),stroke:css('grid')},s);T(s,x(t),B+16,lab,{'text-anchor':'middle',class:'num'});T(s,L-6,y(t)+4,lab,{'text-anchor':'end',class:'num'})}S('line',{x1:x(mn),y1:y(mn),x2:x(mx),y2:y(mx),stroke:css('fg3'),'stroke-dasharray':'4 4'},s);T(s,(L+w-14)/2,h-6,'Qualifying skill',{'text-anchor':'middle'});T(s,14,16,'Race skill');const lab=['Max Verstappen','Sergio Pérez','Lewis Hamilton','Charles Leclerc','Lando Norris'];rows.forEach(r=>{const c=S('circle',{cx:x(r.skill_q),cy:y(r.skill_r),r:6,fill:css(color[k]),stroke:css('panel'),'stroke-width':2},s);hover(c,`${r.name}<br>Qualifying ${r.skill_q.toFixed(2)} · Race ${r.skill_r.toFixed(2)}`);if(lab.includes(r.name)){const left=['Lando Norris','Sergio Pérez'].includes(r.name);T(s,x(r.skill_q)+(left?-9:9),y(r.skill_r)+4,short(r.name),left?{'text-anchor':'end'}:{})}})}
+const LINES=[['Max Verstappen','a'],['Lewis Hamilton','b'],['Charles Leclerc','c3'],['Lando Norris','c4'],['Fernando Alonso','c5']];
+function seasonChart(k){const{s,w}=canvas('#cSeason',330);const L=42,Rr=92,B=296,x=scale(2018,2026,L,w-Rr),y=scale(15,2,B,10);[3,5,7,9,11,13,15].forEach(t=>{S('line',{x1:L,x2:w-Rr,y1:y(t),y2:y(t),stroke:css('grid')},s);T(s,L-6,y(t)+4,'P'+t,{'text-anchor':'end',class:'num'})});for(let t=2018;t<=2026;t+=w<500?2:1)T(s,x(t),B+18,t,{'text-anchor':'middle',class:'num'});
+const rows=D['season'+k];const ends=[];LINES.forEach(([n,c])=>{const r=rows.filter(q=>q.name===n).sort((a,b)=>a.season-b.season);let seg=[];const flush=()=>{if(seg.length>1)S('polyline',{points:seg.join(' '),fill:'none',stroke:css(c),'stroke-width':2},s);seg=[]};r.forEach((q,i)=>{if(i&&q.season-r[i-1].season>1)flush();seg.push(`${x(q.season)},${y(q.score)}`)});flush();r.forEach(q=>{const d=S('circle',{cx:x(q.season),cy:y(q.score),r:4.5,fill:css(c),stroke:css('panel'),'stroke-width':2},s);hover(d,`${n} ${q.season}<br>P${q.score.toFixed(1)}`)});ends.push({n,y:y(r[r.length-1].score),x:x(r[r.length-1].season)})});ends.sort((a,b)=>a.y-b.y);ends.forEach((e,i)=>{if(i&&e.y-ends[i-1].y<15)e.y=ends[i-1].y+15;T(s,e.x+9,e.y+4,short(e.n))});
+$('#seasonLeg').innerHTML=LINES.map(([n,c])=>`<span><i style="background:${css(c)}"></i>${n}</span>`).join('')}
+function peakTable(){const names=['Max Verstappen','Lewis Hamilton','Charles Leclerc','Lando Norris','Fernando Alonso','George Russell','Carlos Sainz Jr.'];let h='<table><tr><th>Driver</th><th class="n">A peak</th><th>A years</th><th class="n">B peak</th><th>B years</th><th class="n">A career</th><th class="n">B career</th></tr>';names.forEach(n=>{const a=get('A',n),b=get('B',n);h+=`<tr><td>${n}</td><td class="n">P${a.peak.toFixed(1)}</td><td>${a.peak_span}</td><td class="n">P${b.peak.toFixed(1)}</td><td>${b.peak_span}</td><td class="n">${a.career>0?'+':''}${a.career.toFixed(0)}</td><td class="n">${b.career>0?'+':''}${b.career.toFixed(0)}</td></tr>`});$('#tPeak').innerHTML=h+'</table>'}
+function adaptChart(){const rows=R.A.slice(0,10);const rh=26;const{s,w}=canvas('#cAdapt',rows.length*rh+30);const L=92,mx=Math.max(...rows.map(r=>r.sig_ci[1]))*1.05,x=scale(0,mx,L,w-12);const bot=rows.length*rh+4;const ts=[0,+(mx/2).toFixed(1),+mx.toFixed(1)];xGrid(s,x,ts,0,bot);rows.forEach((r,i)=>{const yy=i*rh+14;T(s,L-8,yy+4,short(r.name),{'text-anchor':'end'});S('line',{x1:x(r.sig_ci[0]),x2:x(r.sig_ci[1]),y1:yy,y2:yy,stroke:css('a'),'stroke-width':3,opacity:.45,'stroke-linecap':'round'},s);const c=S('circle',{cx:x(r.adapt_sigma),cy:yy,r:5,fill:css('a'),stroke:css('panel'),'stroke-width':2},s);hover(c,`${r.name}: ${r.adapt_sigma.toFixed(2)} (range ${r.sig_ci[0].toFixed(2)}–${r.sig_ci[1].toFixed(2)})`)})}
+function wetChart(){const rows=R.B.slice(0,10);const rh=26;const{s,w}=canvas('#cWet',rows.length*rh+30);const L=92,x=scale(-2,1.6,L,w-12);const bot=rows.length*rh+4;xGrid(s,x,[-1,0,1],0,bot);S('line',{x1:x(0),x2:x(0),y1:0,y2:bot,stroke:css('fg3')},s);rows.forEach((r,i)=>{const yy=i*rh+14;T(s,L-8,yy+4,short(r.name),{'text-anchor':'end'});S('line',{x1:x(r.wet_r_ci[0]),x2:x(r.wet_r_ci[1]),y1:yy,y2:yy,stroke:css('b'),'stroke-width':3,opacity:.45,'stroke-linecap':'round'},s);const c=S('circle',{cx:x(r.wet_r),cy:yy,r:5,fill:css('b'),stroke:css('panel'),'stroke-width':2},s);hover(c,`${r.name}: ${r.wet_r.toFixed(2)} (range ${r.wet_r_ci[0].toFixed(2)} to ${r.wet_r_ci[1].toFixed(2)})`)})}
+function valChart(){const w0=$('#cVal').clientWidth;const rows=D.validation.filter(r=>r.model!=='coin flip');const names={'pipeline A':'Model A','pipeline B':'Model B','season-to-date head-to-head':w0<500?'Head-to-head so far':'Head-to-head so far this season','better grid position':'Better grid position'};const rh=26;const groups=['qualifying','race'];const n=rows.length;const{s,w}=canvas('#cVal',n*rh+groups.length*26+30);const L=Math.min(210,Math.max(130,w*.45)),x=scale(50,85,L,w-44);let yy=8;const start=0;const ticks=[50,60,70,80];const bot=n*rh+groups.length*26+6;xGrid(s,x,ticks,0,bot,v=>v+'%');groups.forEach(g=>{T(s,0,yy+14,g==='race'?'Race':'Qualifying',{class:'strong'});yy+=26;rows.filter(r=>r.session===g).forEach(r=>{const c=r.model==='pipeline A'?'a':r.model==='pipeline B'?'b':'fg3';T(s,L-8,yy+13,names[r.model],{'text-anchor':'end'});const d=S('circle',{cx:x(r.accuracy*100),cy:yy+9,r:6,fill:css(c),stroke:css('panel'),'stroke-width':2},s);hover(d,`${names[r.model]}: ${(r.accuracy*100).toFixed(1)}% · log loss ${r.log_loss.toFixed(3)} · ${r.n} pairs`);T(s,x(r.accuracy*100)+11,yy+13,(r.accuracy*100).toFixed(0)+'%',{class:'num'});yy+=rh})})}
+const mname=k=>k==='A'?'A · laps':'B · results';
+function tables(){const lbl={skill_q:'Qualifying',skill_r:'Race'};let h='<table><tr><th>Model</th><th>Skill</th><th class="n">Order recovered</th><th class="n">90% range hit</th></tr>';D.synthetic.forEach(r=>h+=`<tr><td>${r.pipeline}</td><td>${lbl[r.coef]}</td><td class="n">${r.spearman.toFixed(2)}</td><td class="n">${(r.coverage_90*100).toFixed(0)}%</td></tr>`);$('#tSyn').innerHTML=h+'</table>';
+h='<table><tr><th>Model</th><th class="n">Worst R-hat</th><th class="n">Lowest effective samples</th></tr>';'AB'.split('').forEach(k=>h+=`<tr><td>${k}</td><td class="n">${D.diag[k].max_rhat.toFixed(3)}</td><td class="n">${Math.round(D.diag[k].min_ess)}</td></tr>`);$('#tDiag').innerHTML=h+'</table>';
+h='<table><tr><th>Change</th><th>Model</th><th class="n">Correlation</th><th>New top 5</th></tr>';D.sensitivity.forEach(r=>h+=`<tr><td>${r.scenario}</td><td>${r.pipeline}</td><td class="n">${r.spearman_vs_base.toFixed(2)}</td><td>${r.top5.split(', ').map(short).join(', ')}</td></tr>`);$('#tSens').innerHTML=h+'</table>'}
+let st={car:2023,rank:'A',pq:'A',season:'A'};
+function drawAll(){exChart();carChart(st.car);rankChart(st.rank);abChart();pqChart(st.pq);seasonChart(st.season);adaptChart();wetChart();valChart()}
+const years=[2018,2019,2020,2021,2022,2023,2024,2025,2026];
+toggles('#carCtl',years.map(y=>[y,y+'']),st.car,v=>{st.car=v;carChart(v)});
+[['#rankCtl','rank',rankChart],['#pqCtl','pq',pqChart],['#seasonCtl','season',seasonChart]].forEach(([id,k,fn])=>toggles(id,[['A','Model A: laps'],['B','Model B: results']],'A',v=>{st[k]=v;fn(v)}));
+peakTable();tables();drawAll();let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(drawAll,150)});
+document.fonts&&document.fonts.ready.then(drawAll);
+$('#sensText').textContent=/*SENS*/'';
+</script>
